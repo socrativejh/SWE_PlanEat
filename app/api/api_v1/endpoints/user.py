@@ -4,17 +4,26 @@ from app.crud import user as crud_user
 
 router = APIRouter()
 
-@router.post("/signup", response_model=UserInDB)
+@router.post("/signup")
 async def create_user(user_in: UserCreate):
+    # 이메일 도메인 검증
+    allowed_domains = ["g.skku.edu", "skku.edu"]
+    domain = user_in.email.split("@")[1]
+    if domain not in allowed_domains:
+        return {"result": 2, "msg": "학교 이메일로만 가입 가능합니다."}
+    
+    # 이메일 중복 확인
     user = await crud_user.get_user_by_email(user_in.email)
     if user:
-        raise HTTPException(status_code=400, detail="Email already registered")
+        return {"result": 1, "msg": "이미 사용중인 이메일 입니다."} 
+
+    # 사용자 생성
     new_user = await crud_user.create_user(user_in.dict())
-    return new_user
+    return {"result": 0, "msg": "회원가입 성공"} 
 
 @router.post("/login")
 async def login(user_in: UserLogin):
     user = await crud_user.get_user_by_email(user_in.email)
     if not user or user_in.password != user["password"]:
-        return 1  # 실패 시 1 반환
-    return 0  # 성공 시 0 반환
+        return {"result": 1, "msg": "로그인 실패"}  
+    return {"result": 0, "msg": "로그인 성공"} 

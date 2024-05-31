@@ -28,14 +28,6 @@ class UserCreate(BaseModel):
     allergies: List[int]
     campus_id: int
 
-    @validator("email")
-    def validate_email_domain(cls, value):
-        allowed_domains = ["g.skku.edu", "skku.edu"]
-        domain = value.split("@")[1]
-        if domain not in allowed_domains:
-            raise ValueError("학교 이메일로만 가입 가능합니다. (g.skku.edu 또는 skku.edu)")
-        return value
-
 class UserInDB(UserCreate):
     id: str
 

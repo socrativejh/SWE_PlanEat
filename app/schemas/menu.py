@@ -1,7 +1,9 @@
 from pydantic import BaseModel
 from typing import List
+from datetime import datetime
  
 class Menu(BaseModel):
+    id: int
     name: str
     protein: float
     sugar: float
@@ -10,5 +12,6 @@ class Menu(BaseModel):
     kcal: int
     price: int
     allergy: List[int]
-    date: str
+    date: datetime
     mealtime: int
+    tags: List[int]

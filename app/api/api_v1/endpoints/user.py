@@ -10,7 +10,7 @@ async def create_user(user_in: UserCreate):
     allowed_domains = ["g.skku.edu", "skku.edu"]
     domain = user_in.email.split("@")[1]
     if domain not in allowed_domains:
-        return {"result": 2, "msg": "학교 이메일로만 가입 가능합니다."}
+        return {"result": 2, "msg": "학교 이메일(@g.skku.edu 또는 @skku.edu)로만 가입 가능합니다."}
     
     # 이메일 중복 확인
     user = await crud_user.get_user_by_email(user_in.email)

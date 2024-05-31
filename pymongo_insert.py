@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 from datetime import datetime
 
-client = MongoClient('mongodb://swe:planeat1234@3.37.184.136:27017/?authMechanism=DEFAULT&authSource=swe', 27017)
+client = MongoClient('mongodb://swe:planeat1234@3.37.184.136:27017/?authMechanism=DEFAULT&authSource=admin')
 
 mydb = client['swe']
 # mycol = mydb['restaurants']

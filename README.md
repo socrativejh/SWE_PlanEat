@@ -36,3 +36,4 @@ This project aims to enhance the information of menu items stored in a database 
     ```
 
 This will start the FastAPI application and enable live reloading during development.
+

@@ -5,3 +5,5 @@ DATABASE_NAME = "swe"
 
 client = MongoClient(mongodb_URI)
 db = client[DATABASE_NAME]
+
+

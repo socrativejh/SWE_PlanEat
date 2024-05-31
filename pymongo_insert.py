@@ -1,5 +1,4 @@
 from pymongo import MongoClient
-from bson import ObjectId
 from datetime import datetime
 
 client = MongoClient('mongodb://swe:planeat1234@3.37.184.136', 27017)
@@ -30,10 +29,7 @@ for id in campus_id:
                     "image_url":
                         image_url
                 },
-                "menu_ids": [
-                    ObjectId("menu_id_1"),
-                    ObjectId("menu_id_2")
-                ]
+                "menu_ids": [1, 2]
             }
     else:
         for image_url, name, location in image_urls_2, names_2, locations_2:
@@ -46,10 +42,7 @@ for id in campus_id:
                     "image_url":
                         image_url
                 },
-                "menu_ids": [
-                    ObjectId("menu_id_3"),
-                    ObjectId("menu_id_4")
-                ]
+                "menu_ids": [1, 2]
             }
     restaurants_insert.append(item)
 
@@ -57,39 +50,39 @@ users_insert = [
     {
         "email": "user1@g.skku.edu",
         "password": "pw1",
-        "allergies": [ObjectId("allergy_id_2"), ObjectId("allergy_id_9")],
+        "allergies": [2, 9],
         "campus_id": 1,
     },
     {
         "email": "user2@skku.edu",
         "password": "pw2",
-        "allergies": [ObjectId("allergy_id_3")],
+        "allergies": [3],
         "campus_id": 2,
     }
 ]
 
 tags_insert = [
-    { "_id": ObjectId("tag_id_1"), "tag_type": "cost-effective" },
-    { "_id": ObjectId("tag_id_2"), "tag_type": "high-protein" },
-    { "_id": ObjectId("tag_id_3"), "tag_type": "vegan" },
-    { "_id": ObjectId("tag_id_4"), "tag_type": "low-calorie" }
+    { "_id": 1, "tag_type": "cost-effective" },
+    { "_id": 2, "tag_type": "high-protein" },
+    { "_id": 3, "tag_type": "vegan" },
+    { "_id": 4, "tag_type": "low-calorie" }
 ]
 
 allergies_insert = [
-    { "_id": ObjectId("allergy_id_1"), "allergy_type": "none" },
-    { "_id": ObjectId("allergy_id_2"), "allergy_type": "dairy" },
-    { "_id": ObjectId("allergy_id_3"), "allergy_type": "shellfish" },
-    { "_id": ObjectId("allergy_id_4"), "allergy_type": "soy" },
-    { "_id": ObjectId("allergy_id_5"), "allergy_type": "wheat" },
-    { "_id": ObjectId("allergy_id_6"), "allergy_type": "squid" },
-    { "_id": ObjectId("allergy_id_7"), "allergy_type": "peach" },
-    { "_id": ObjectId("allergy_id_8"), "allergy_type": "tomato" },
-    { "_id": ObjectId("allergy_id_9"), "allergy_type": "nuts" },
+    { "_id": 1, "allergy_type": "none" },
+    { "_id": 2, "allergy_type": "dairy" },
+    { "_id": 3, "allergy_type": "shellfish" },
+    { "_id": 4, "allergy_type": "soy" },
+    { "_id": 5, "allergy_type": "wheat" },
+    { "_id": 6, "allergy_type": "squid" },
+    { "_id": 7, "allergy_type": "peach" },
+    { "_id": 8, "allergy_type": "tomato" },
+    { "_id": 9, "allergy_type": "nuts" },
 ]
 
 menus_insert = [
     {
-        "_id": ObjectId("menu_id_1"),
+        "_id": 1,
         "name": "탄탄면",
         "protein": 10.5,
         "sugar": 10.2,
@@ -97,12 +90,12 @@ menus_insert = [
         "fat": 15.0,
         "kcal": 500,
         "price": 6000,
-        "allergy": [ObjectId("allergy_id_5"), ObjectId("allergy_id_9")],
+        "allergy": [5, 9],
         "date": datetime(2023, 5, 31),
-        "mealtime": ObjectId("meal_time_id_1"),
+        "mealtime": 1,
     },
     {
-        "_id": ObjectId("menu_id_2"),
+        "_id": 2,
         "name": "폭신폭신따바오",
         "protein": 20.5,
         "sugar": 9.2,
@@ -110,25 +103,25 @@ menus_insert = [
         "fat": 20.0,
         "kcal": 550,
         "price": 6000,
-        "allergy": [ObjectId("allergy_id_5")],
+        "allergy": [5],
         "date": datetime(2023, 6, 1),
-        "mealtime": ObjectId("meal_time_id_2"),
+        "mealtime": 2,
     }
 ]
 
 meal_times = [
     {
-        "_id": ObjectId("meal_time_id_1"),
+        "_id": 1,
         "start_time": "08:00:00",
         "end_time": "09:00:00",
     },
     {
-        "_id": ObjectId("meal_time_id_2"),
+        "_id": 2,
         "start_time": "08:00:00",
         "end_time": "13:30:00",
     },
     {
-        "_id": ObjectId("meal_time_id_3"),
+        "_id": 3,
         "start_time": "11:00:00",
         "end_time": "18:30:00",
     },

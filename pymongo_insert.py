@@ -55,13 +55,13 @@ for id in campus_id:
 
 users_insert = [
     {
-        "email": "user1@example.com",
+        "email": "user1@g.skku.edu",
         "password": "pw1",
         "allergies": [ObjectId("allergy_id_2"), ObjectId("allergy_id_9")],
         "campus_id": 1,
     },
     {
-        "email": "user2@example.com",
+        "email": "user2@skku.edu",
         "password": "pw2",
         "allergies": [ObjectId("allergy_id_3")],
         "campus_id": 2,

@@ -125,7 +125,7 @@ meal_times = [
     },
 ]
 
-campuses = [
+campuses_insert = [
     {
         "_id": 1,
         "map_image_url": ""
@@ -141,3 +141,5 @@ mydb['restaurants'].insert_many(restaurants_insert)
 mydb['users'].insert_many(users_insert)
 mydb['tags'].insert_many(tags_insert)
 mydb['allergies'].insert_many(allergies_insert)
+mydb['meal_times'].insert_many(meal_times)
+mydb['campuses'].insert_many(campuses_insert)

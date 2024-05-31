@@ -5,3 +5,8 @@ pydantic==2.7.2
 pydantic-settings==2.2.1
 pymongo==4.7.2
 uvicorn==0.30.0
+openai==0.28
+python-dotenv
+
+
+

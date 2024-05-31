@@ -128,10 +128,12 @@ meal_times_insert = [
 campuses_insert = [
     {
         "_id": 1,
+        "name": "명륜",
         "map_image_url": ""
     },
     {
         "_id": 2,
+        "name": "율전",
         "map_image_url": ""
     }
 ]

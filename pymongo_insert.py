@@ -107,7 +107,7 @@ menus_insert = [
     }
 ]
 
-meal_times = [
+meal_times_insert = [
     {
         "_id": 1,
         "start_time": "08:00:00",
@@ -141,5 +141,6 @@ mydb['restaurants'].insert_many(restaurants_insert)
 mydb['users'].insert_many(users_insert)
 mydb['tags'].insert_many(tags_insert)
 mydb['allergies'].insert_many(allergies_insert)
-mydb['meal_times'].insert_many(meal_times)
+mydb['menus'].insert_many(menus_insert)
+mydb['meal_times'].insert_many(meal_times_insert)
 mydb['campuses'].insert_many(campuses_insert)

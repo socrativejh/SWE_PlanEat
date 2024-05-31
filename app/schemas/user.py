@@ -8,10 +8,24 @@ class PyObjectId(ObjectId):
         from pydantic_core import core_schema
         return core_schema.str_schema()
 
+    @classmethod
+    def __get_validators__(cls):
+        yield cls.validate
+
+    @classmethod
+    def validate(cls, v):
+        if not ObjectId.is_valid(v):
+            raise ValueError('Invalid ObjectId')
+        return ObjectId(v)
+
+    @classmethod
+    def __modify_schema__(cls, field_schema):
+        field_schema.update(type="string")
+
 class UserCreate(BaseModel):
     email: EmailStr
     password: str
-    allergies: List[PyObjectId]
+    allergies: List[int]
     campus_id: int
 
     @validator("email")
@@ -23,13 +37,13 @@ class UserCreate(BaseModel):
         return value
 
 class UserInDB(UserCreate):
-    id: PyObjectId
+    id: str
 
-    model_config = {
-        "from_attributes": True,
-        "arbitrary_types_allowed": True,
-    }
-        
+    class Config:
+        json_encoders = {
+            ObjectId: str
+        }
+
 class UserLogin(BaseModel):
     email: str
     password: str

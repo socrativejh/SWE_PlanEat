@@ -6,8 +6,7 @@ client = MongoClient('mongodb://swe:planeat1234@3.37.184.136', 27017)
 mydb = client['swe']
 # mycol = mydb['restaurants']
 
-restaurants_insert = []
-campus_id = [1, 2]
+restaurants_insert = []; campus_id = [1, 2]; i = 1
 
 names_1 = ["패컬리티식당", "은행골식당", "법고을식당", "옥류천식당", "금잔디식당"]
 locations_1 = ["600주년기념관 6층", "600주년기념관 지하1층", "법학관 지하 2층", "교수회관 1층", "경영관 지하2층"]
@@ -21,6 +20,7 @@ for id in campus_id:
     if id == 1:
         for image_url, name, location in zip(image_urls_1, names_1, locations_1):
             item = {
+                "_id": i,
                 "campus_id": id,
                 "name": name,
                 "location": location,
@@ -31,9 +31,12 @@ for id in campus_id:
                 },
                 "menu_ids": [1, 2]
             }
+            i += 1
+            restaurants_insert.append(item)
     else:
         for image_url, name, location in image_urls_2, names_2, locations_2:
             item = {
+                "_id": i, 
                 "campus_id": id,
                 "name": name,
                 "location": location,
@@ -44,16 +47,19 @@ for id in campus_id:
                 },
                 "menu_ids": [1, 2]
             }
-    restaurants_insert.append(item)
+            i += 1
+            restaurants_insert.append(item)
 
 users_insert = [
     {
+        "_id": 1,
         "email": "user1@g.skku.edu",
         "password": "pw1",
         "allergies": [2, 9],
         "campus_id": 1,
     },
     {
+        "_id": 2,
         "email": "user2@skku.edu",
         "password": "pw2",
         "allergies": [3],

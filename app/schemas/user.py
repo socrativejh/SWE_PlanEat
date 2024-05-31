@@ -39,3 +39,7 @@ class UserInDB(UserCreate):
 class UserLogin(BaseModel):
     email: str
     password: str
+    
+class UserResponse(BaseModel):
+    result: int
+    msg: str

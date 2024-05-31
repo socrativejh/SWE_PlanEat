@@ -7,19 +7,21 @@ from typing import List
 
 router = APIRouter()
 
-@router.get("/campuses", response_model=List[Campus])
+@router.get("/", response_model=List[Campus])
 async def read_campuses():
     campuses = await crud_campus.get_all_campuses()
+    if not campuses:
+        raise HTTPException(status_code=404, detail="No campuses found")
     return [Campus(id=campus["_id"], name=campus["name"], map_image_url=campus.get("map_image_url")) for campus in campuses]
 
-@router.get("/campuses/{campus_id}", response_model=Campus)
+@router.get("/{campus_id}", response_model=Campus)
 async def read_campus(campus_id: int):
     campus = await crud_campus.get_campus_by_id(campus_id)
     if not campus:
         raise HTTPException(status_code=404, detail="Campus not found")
     return Campus(id=campus["_id"], name=campus["name"], map_image_url=campus.get("map_image_url"))
 
-@router.get("/campuses/{campus_id}/restaurants", response_model=List[Restaurant])
+@router.get("/{campus_id}/restaurants", response_model=List[Restaurant])
 async def read_restaurants_by_campus(campus_id: int):
     restaurants = await crud_restaurant.get_restaurants_by_campus_id(campus_id)
     if not restaurants:

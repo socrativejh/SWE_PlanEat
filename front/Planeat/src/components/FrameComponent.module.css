@@ -36,7 +36,7 @@
 
 .menuList {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 25px;
   margin-top: 40px;
 }
@@ -78,7 +78,7 @@
 .menuName {
   margin: 5px 0;
   flex: 5;
-  font-size: 16px;
+  font-size: 17px;
 }
 
 .menuPrice {

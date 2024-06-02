@@ -126,31 +126,6 @@ const Content = ({ className = "" }) => {
           </div>
         </div>
         <div className={styles.filtersParent}>
-          {/* <div className={styles.filters}>
-            <div className={styles.filterOptions}>
-              <button
-                className={styles.filterButtons}
-                onClick={onFilterButtonsClick}
-              >
-                <b className={styles.b}>모두보기</b>
-              </button>
-              <button className={styles.filterButtons1}>
-                <b className={styles.b1}>고단백</b>
-              </button>
-              <button className={styles.filterButtons2}>
-                <b className={styles.b2}>가성비</b>
-              </button>
-              <button className={styles.filterButtons3}>
-                <b className={styles.b3}>저칼로리</b>
-              </button>
-              <button className={styles.filterButtons4}>
-                <b className={styles.b4}>비건</b>
-              </button>
-              <button className={styles.filterButtons5}>
-                <b className={styles.b5}>저당</b>
-              </button>
-            </div>
-          </div> */}
           <div className={styles.toggle}>
             <div className={styles.toggleContentWrapper}>
               <div className={styles.toggleContent}>

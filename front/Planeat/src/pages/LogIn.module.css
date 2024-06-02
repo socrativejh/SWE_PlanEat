@@ -1,0 +1,35 @@
+.content,
+.logIn {
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+.content {
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 var(--padding-xl);
+  max-width: 100%;
+}
+.logIn {
+  width: 100%;
+  position: relative;
+  background-color: var(--background);
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 0 11.375rem;
+  gap: 5.187rem;
+  line-height: normal;
+  letter-spacing: normal;
+}
+@media screen and (max-width: 975px) {
+  .logIn {
+    gap: 2.563rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .logIn {
+    gap: 1.313rem;
+  }
+}

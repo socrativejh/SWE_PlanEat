@@ -1,0 +1,115 @@
+.titleBackground {
+  align-self: stretch;
+  height: 24.438rem;
+  position: relative;
+  background-color: var(--black);
+  display: none;
+}
+.div,
+.h2 {
+  position: relative;
+  white-space: nowrap;
+  z-index: 1;
+}
+.h2 {
+  margin: 0;
+  align-self: stretch;
+  font-size: inherit;
+  letter-spacing: -0.02em;
+  line-height: 100%;
+  font-weight: 600;
+  font-family: inherit;
+}
+.div {
+  flex: 1;
+  line-height: 160%;
+}
+.parent,
+.wrapper {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.wrapper {
+  flex-direction: row;
+  padding: 0 var(--padding-33xl) 0 var(--padding-34xl);
+  font-size: var(--font-size-lg);
+}
+.parent {
+  flex-direction: column;
+  gap: var(--gap-xs);
+}
+.b {
+  position: relative;
+  line-height: 160%;
+  font-weight: 700;
+  display: inline-block;
+  min-width: 2.625rem;
+  white-space: nowrap;
+}
+.container {
+  border-radius: var(--br-xl);
+  background-color: var(--purple1);
+  overflow: hidden;
+  flex-direction: row;
+  padding: var(--padding-9xs) var(--padding-base);
+  z-index: 1;
+}
+.container,
+.frameContainer,
+.frameParent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frameContainer {
+  flex-direction: row;
+  padding: 0 var(--padding-57xl);
+  font-size: var(--font-size-base);
+}
+.frameParent {
+  width: 14.125rem;
+  flex-direction: column;
+  gap: var(--gap-9xl);
+}
+.frameWrapper,
+.titleBackgroundParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 var(--padding-xl);
+}
+.titleBackgroundParent {
+  background-color: var(--black);
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-61xl);
+  gap: var(--gap-61xl);
+  text-align: left;
+  font-size: var(--font-size-9xl);
+  color: var(--white);
+  font-family: var(--font-pretendard);
+}
+@media screen and (max-width: 1050px) {
+  .titleBackgroundParent {
+    gap: var(--gap-21xl);
+  }
+}
+@media screen and (max-width: 750px) {
+  .titleBackgroundParent {
+    gap: var(--gap-xl);
+  }
+}
+@media screen and (max-width: 450px) {
+  .h2 {
+    font-size: var(--font-size-3xl);
+    line-height: 1.375rem;
+  }
+  .titleBackgroundParent {
+    padding-bottom: var(--padding-33xl);
+    box-sizing: border-box;
+  }
+}

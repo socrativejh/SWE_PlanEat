@@ -1,0 +1,164 @@
+.div,
+.h3 {
+  position: relative;
+  white-space: nowrap;
+}
+.h3 {
+  margin: 0;
+  align-self: stretch;
+  font-size: inherit;
+  letter-spacing: -0.02em;
+  line-height: 100%;
+  font-weight: 600;
+  font-family: inherit;
+}
+.div {
+  flex: 1;
+  line-height: 160%;
+}
+.mealTime,
+.restaurantName {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.mealTime {
+  flex-direction: row;
+  padding: 0 var(--padding-33xl) 0 var(--padding-34xl);
+  font-size: var(--font-size-lg);
+}
+.restaurantName {
+  flex-direction: column;
+  gap: var(--gap-xs);
+}
+.b {
+  position: relative;
+  line-height: 160%;
+  font-weight: 700;
+  display: inline-block;
+  min-width: 2.625rem;
+  white-space: nowrap;
+}
+.categoryList {
+  border-radius: var(--br-xl);
+  background-color: var(--purple1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-9xs) var(--padding-base);
+}
+.b1 {
+  flex: 1;
+  position: relative;
+  line-height: 160%;
+  font-weight: 700;
+}
+.categoryList1 {
+  width: 3.75rem;
+  border-radius: var(--br-xl);
+  background-color: var(--purple1);
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-9xs) var(--padding-sm);
+  box-sizing: border-box;
+}
+.category {
+  flex-direction: row;
+  gap: var(--gap-3xs);
+}
+.category,
+.foodCategories,
+.restaurantNameTime {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.foodCategories {
+  flex-direction: row;
+  padding: 0 var(--padding-22xl);
+  font-size: var(--font-size-base);
+}
+.restaurantNameTime {
+  width: 14.125rem;
+  flex-direction: column;
+  gap: var(--gap-9xl);
+}
+.restaurantDetails {
+  width: 70.625rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 var(--padding-xl);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.restaurantInfo {
+  width: 71.875rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 7.5rem;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-9xl);
+  color: var(--white);
+  font-family: var(--font-pretendard);
+}
+.content,
+.menuInfo {
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+.content {
+  width: 118.75rem;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 var(--padding-xl);
+  max-width: 100%;
+}
+.menuInfo {
+  width: 100%;
+  position: relative;
+  background-color: var(--background);
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 0 7.937rem;
+  gap: var(--gap-61xl);
+  line-height: normal;
+  letter-spacing: normal;
+}
+@media screen and (max-width: 1150px) {
+  .restaurantInfo {
+    gap: var(--gap-41xl);
+  }
+}
+@media screen and (max-width: 1050px) {
+  .menuInfo {
+    gap: var(--gap-21xl);
+  }
+}
+@media screen and (max-width: 750px) {
+  .restaurantInfo {
+    gap: var(--gap-11xl);
+  }
+  .menuInfo {
+    gap: var(--gap-xl);
+  }
+}
+@media screen and (max-width: 450px) {
+  .h3 {
+    font-size: var(--font-size-3xl);
+    line-height: 1.375rem;
+  }
+}

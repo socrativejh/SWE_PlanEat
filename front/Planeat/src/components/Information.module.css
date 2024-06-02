@@ -1,0 +1,429 @@
+.background {
+  width: 71.875rem;
+  height: 32.625rem;
+  position: relative;
+  border-radius: var(--br-xl);
+  background-color: var(--black);
+  display: none;
+  max-width: 100%;
+}
+.b,
+.g {
+  position: relative;
+  z-index: 1;
+}
+.b {
+  width: 6rem;
+  letter-spacing: -0.02em;
+  line-height: 100%;
+  font-weight: 600;
+  display: inline-block;
+  white-space: nowrap;
+}
+.g {
+  align-self: stretch;
+  line-height: 1.813rem;
+}
+.nutritionTitle,
+.nutritionUnit {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.nutritionUnit {
+  flex: 1;
+  flex-direction: column;
+  padding: var(--padding-10xs) 0 0;
+  box-sizing: border-box;
+  min-width: 10.875rem;
+  font-size: var(--font-size-lg);
+  color: var(--gray1);
+}
+.nutritionTitle {
+  width: 25.125rem;
+  flex-direction: row;
+  gap: var(--gap-20xl);
+  max-width: 100%;
+}
+.div {
+  align-self: stretch;
+  position: relative;
+  line-height: 1.813rem;
+  z-index: 1;
+}
+.allergyInfo {
+  width: 29.938rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-10xs) 0 0;
+  box-sizing: border-box;
+  max-width: 100%;
+  text-align: right;
+  font-size: var(--font-size-lg);
+  color: var(--red);
+}
+.nutritionDetails,
+.tableIcon {
+  align-self: stretch;
+  max-width: 100%;
+}
+.nutritionDetails {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.tableIcon {
+  position: relative;
+  overflow: hidden;
+  max-height: 100%;
+  z-index: 1;
+}
+.div1,
+.div2,
+.div3,
+.div4,
+.div5,
+.div6 {
+  position: relative;
+  line-height: 1.813rem;
+  display: inline-block;
+  z-index: 1;
+}
+.div1 {
+  flex: 1;
+  min-width: 1.438rem;
+}
+.div2,
+.div3,
+.div4,
+.div5,
+.div6 {
+  width: 10rem;
+  flex-shrink: 0;
+}
+.div5,
+.div6 {
+  z-index: 2;
+}
+.div6 {
+  z-index: 1;
+}
+.table {
+  width: 66.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-12xs);
+  max-width: 100%;
+}
+.tableIcon1 {
+  align-self: stretch;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  z-index: 1;
+}
+.div7,
+.g1,
+.g2,
+.g3,
+.g4,
+.kcal {
+  position: relative;
+  line-height: 1.813rem;
+  display: inline-block;
+  z-index: 1;
+}
+.div7 {
+  flex: 1;
+  color: var(--white);
+  min-width: 6.125rem;
+}
+.g1,
+.g2,
+.g3,
+.g4,
+.kcal {
+  width: 10rem;
+  flex-shrink: 0;
+}
+.g4,
+.kcal {
+  z-index: 2;
+}
+.kcal {
+  z-index: 1;
+}
+.table1 {
+  width: 66.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-12xs);
+  max-width: 100%;
+}
+.tableIcon2 {
+  align-self: stretch;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  z-index: 1;
+}
+.div8,
+.g5,
+.g6,
+.g7,
+.g8,
+.kcal1 {
+  position: relative;
+  line-height: 1.813rem;
+  display: inline-block;
+}
+.div8 {
+  flex: 1;
+  color: var(--white);
+  min-width: 6.563rem;
+  z-index: 2;
+}
+.g5,
+.g6,
+.g7,
+.g8,
+.kcal1 {
+  width: 10rem;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.g8,
+.kcal1 {
+  z-index: 2;
+}
+.kcal1 {
+  z-index: 1;
+}
+.table2 {
+  width: 66.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-12xs);
+  max-width: 100%;
+}
+.tableIcon3 {
+  align-self: stretch;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  z-index: 1;
+}
+.div9,
+.g10,
+.g11,
+.g12,
+.g9,
+.kcal2 {
+  position: relative;
+  line-height: 1.813rem;
+  display: inline-block;
+}
+.div9 {
+  flex: 1;
+  color: var(--white);
+  min-width: 3.813rem;
+  z-index: 2;
+}
+.g10,
+.g11,
+.g12,
+.g9,
+.kcal2 {
+  width: 10rem;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.g12,
+.kcal2 {
+  z-index: 2;
+}
+.kcal2 {
+  z-index: 1;
+}
+.table3 {
+  width: 66.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-12xs);
+  max-width: 100%;
+}
+.tableIcon4 {
+  align-self: stretch;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  z-index: 1;
+}
+.div10,
+.g13,
+.g14,
+.g15,
+.g16,
+.kcal3 {
+  position: relative;
+  line-height: 1.813rem;
+  display: inline-block;
+}
+.div10 {
+  flex: 1;
+  color: var(--white);
+  min-width: 1.5rem;
+  z-index: 2;
+}
+.g13,
+.g14,
+.g15,
+.g16,
+.kcal3 {
+  width: 10rem;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.g16,
+.kcal3 {
+  z-index: 2;
+}
+.kcal3 {
+  z-index: 1;
+}
+.table4 {
+  width: 66.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-12xs);
+  max-width: 100%;
+}
+.tableIcon5 {
+  align-self: stretch;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  z-index: 1;
+}
+.div11,
+.g17,
+.g18,
+.g19,
+.g20,
+.kcal4 {
+  position: relative;
+  line-height: 1.813rem;
+  display: inline-block;
+}
+.div11 {
+  flex: 1;
+  color: var(--white);
+  min-width: 2.938rem;
+  z-index: 2;
+}
+.g17,
+.g18,
+.g19,
+.g20,
+.kcal4 {
+  width: 10rem;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.g20,
+.kcal4 {
+  z-index: 2;
+}
+.kcal4 {
+  z-index: 1;
+}
+.table5 {
+  width: 66.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-12xs);
+  max-width: 100%;
+}
+.tableIcon6 {
+  align-self: stretch;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  z-index: 1;
+}
+.information,
+.nutritionTable {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: var(--gap-mini-5);
+  max-width: 100%;
+  font-size: var(--font-size-lg);
+  color: var(--gray1);
+}
+.information {
+  border-radius: var(--br-xl);
+  background-color: var(--black);
+  align-items: flex-start;
+  padding: var(--padding-31xl) var(--padding-11xl) var(--padding-30xl);
+  box-sizing: border-box;
+  gap: var(--gap-17xl);
+  text-align: left;
+  font-size: var(--font-size-9xl);
+  color: var(--white);
+  font-family: var(--font-pretendard);
+}
+@media screen and (max-width: 1050px) {
+  .nutritionDetails {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 750px) {
+  .information {
+    gap: var(--gap-lg);
+    padding-top: var(--padding-13xl);
+    padding-bottom: var(--padding-13xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .b {
+    font-size: var(--font-size-3xl);
+    line-height: 1.375rem;
+  }
+  .nutritionTitle {
+    flex-wrap: wrap;
+    gap: var(--gap-lgi);
+  }
+}

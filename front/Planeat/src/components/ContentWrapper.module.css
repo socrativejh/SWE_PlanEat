@@ -1,0 +1,728 @@
+.contentWrapperChild,
+.h2 {
+  position: relative;
+  max-width: 100%;
+}
+.contentWrapperChild {
+  width: 58.125rem;
+  height: 55.688rem;
+  border-radius: var(--br-xl);
+  background-color: var(--black);
+  display: none;
+}
+.h2 {
+  margin: 0;
+  width: 42.563rem;
+  font-size: inherit;
+  line-height: 2.375rem;
+  font-weight: 700;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.b,
+.title {
+  align-self: stretch;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 var(--padding-2xl) var(--padding-7xs) var(--padding-xl);
+  box-sizing: border-box;
+  max-width: 100%;
+  text-align: center;
+  font-size: var(--font-size-13xl);
+}
+.b {
+  position: relative;
+  z-index: 1;
+}
+.div {
+  display: inline-block;
+  min-width: 3.25rem;
+}
+.div,
+.div1,
+.div2 {
+  position: relative;
+  line-height: 1.688rem;
+  font-weight: 500;
+  white-space: nowrap;
+  z-index: 1;
+}
+.div1 {
+  display: inline-block;
+  min-width: 4.375rem;
+}
+.div2 {
+  align-self: stretch;
+}
+.emailPasswordCampus,
+.emailPasswordCampusLabel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.emailPasswordCampusLabel {
+  align-self: stretch;
+  gap: var(--gap-31xl);
+}
+.emailPasswordCampus {
+  width: 5.75rem;
+  padding: var(--padding-xl) 0 0;
+  box-sizing: border-box;
+}
+.planeat1234 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.text {
+  height: 4rem;
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xl);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.dropdownBackground,
+.textboxShort {
+  border-radius: var(--br-5xs);
+  border: 1px solid var(--gray2);
+  box-sizing: border-box;
+}
+.textboxShort {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-width: 13.438rem;
+  max-width: 100%;
+  z-index: 1;
+}
+.dropdownBackground {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.selected {
+  width: calc(100% - 24px);
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  height: 4rem;
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xl);
+  box-sizing: border-box;
+  font-family: var(--font-pretendard);
+  font-size: var(--font-size-xl);
+  color: var(--gray1);
+  min-width: 6.063rem;
+  z-index: 1;
+}
+.optionsBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0 var(--br-5xs) var(--br-5xs) 0;
+  background-color: var(--gray2);
+  width: 100%;
+  height: 100%;
+}
+.dropdownChild {
+  position: absolute;
+  top: 1.75rem;
+  left: 1.25rem;
+  width: 1.5rem;
+  height: 0.75rem;
+  z-index: 1;
+}
+.dropdown {
+  height: 4rem;
+  width: 4rem;
+  position: relative;
+  z-index: 1;
+}
+.emailselectbox,
+.text1,
+.textboxLong,
+.textboxShortParent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.emailselectbox {
+  width: 14.125rem;
+  border-radius: var(--br-5xs);
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+.text1,
+.textboxLong,
+.textboxShortParent {
+  max-width: 100%;
+}
+.textboxShortParent {
+  align-self: stretch;
+  gap: var(--gap-5xs);
+}
+.text1,
+.textboxLong {
+  box-sizing: border-box;
+}
+.text1 {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  height: 4rem;
+  flex: 1;
+  overflow: hidden;
+  padding: var(--padding-xl);
+  font-family: var(--font-pretendard);
+  font-size: var(--font-size-xl);
+  color: var(--white);
+  min-width: 15.625rem;
+}
+.textboxLong {
+  align-self: stretch;
+  border-radius: var(--br-5xs);
+  border: 1px solid var(--gray2);
+  z-index: 1;
+}
+.checkIcon {
+  height: 1.125rem;
+  width: 1.125rem;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: none;
+  z-index: 1;
+}
+.campusButtonLabels {
+  position: relative;
+  letter-spacing: 0.1px;
+  line-height: 1.25rem;
+  display: inline-block;
+  min-width: 2.188rem;
+  white-space: nowrap;
+}
+.container {
+  border-radius: var(--br-5xs) 0 0 var(--br-5xs);
+  border: 1px solid var(--gray2);
+  padding: var(--padding-xl) var(--padding-38xl);
+  gap: var(--gap-5xs);
+}
+.buttonSegment1,
+.container {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.labelText {
+  position: relative;
+  letter-spacing: 0.1px;
+  line-height: 1.25rem;
+  display: inline-block;
+  min-width: 2.188rem;
+  white-space: nowrap;
+}
+.checkIcon1 {
+  height: 1.125rem;
+  width: 1.125rem;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: none;
+  z-index: 0;
+}
+.buttonSegment2,
+.container1,
+.segmentedButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.container1 {
+  border-radius: 0 var(--br-5xs) var(--br-5xs) 0;
+  border: 1px solid var(--gray2);
+  overflow: hidden;
+  padding: var(--padding-xl) var(--padding-38xl);
+  gap: var(--gap-5xs);
+}
+.buttonSegment2,
+.segmentedButton {
+  z-index: 1;
+}
+.buttonSegment2 {
+  overflow: hidden;
+  margin-left: -0.063rem;
+}
+.segmentedButton {
+  border-radius: var(--br-5xs);
+  row-gap: 20px;
+  text-align: center;
+  color: var(--gray1);
+  font-family: var(--font-pretendard-variable);
+}
+.emailInput,
+.inputFields {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.emailInput {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-3xs);
+  min-width: 22.938rem;
+  max-width: 100%;
+  color: var(--white);
+}
+.inputFields {
+  width: 42.625rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--gap-6xl);
+  font-size: var(--font-size-xl);
+  color: var(--gray1);
+}
+.b1,
+.info,
+.inputFields {
+  max-width: 100%;
+}
+.info {
+  width: 49.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-7xs);
+  box-sizing: border-box;
+  gap: var(--gap-11xl);
+}
+.b1 {
+  flex: 1;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+.allergyHeader {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 0 var(--padding-5xs);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.div3 {
+  position: relative;
+  font-size: var(--font-size-xl);
+  line-height: 1.5rem;
+  font-weight: 500;
+  font-family: var(--font-pretendard);
+  color: var(--gray1);
+  text-align: left;
+  display: inline-block;
+  min-width: 4.375rem;
+  white-space: nowrap;
+}
+.allergyItems {
+  cursor: pointer;
+  border: 1px solid var(--gray2);
+  padding: var(--padding-sm) var(--padding-17xl);
+  background-color: transparent;
+  margin: 0 !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-31xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.allergyItems1:hover,
+.allergyItems2:hover,
+.allergyItems3:hover,
+.allergyItems4:hover,
+.allergyItems7:hover,
+.allergyItems:hover {
+  background-color: var(--color-dimgray-300);
+  border: 1px solid var(--color-dimgray-200);
+  box-sizing: border-box;
+}
+.div4 {
+  position: relative;
+  font-size: var(--font-size-xl);
+  line-height: 1.5rem;
+  font-weight: 500;
+  font-family: var(--font-pretendard);
+  color: var(--gray1);
+  text-align: left;
+  display: inline-block;
+  min-width: 2.188rem;
+}
+.allergyItems1 {
+  cursor: pointer;
+  border: 1px solid var(--gray2);
+  padding: var(--padding-sm) var(--padding-17xl);
+  background-color: transparent;
+  margin: 0 !important;
+  position: absolute;
+  top: 0;
+  left: 9.75rem;
+  border-radius: var(--br-31xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.div5 {
+  position: relative;
+  font-size: var(--font-size-xl);
+  line-height: 1.5rem;
+  font-weight: 500;
+  font-family: var(--font-pretendard);
+  color: var(--gray1);
+  text-align: left;
+  display: inline-block;
+  min-width: 3.25rem;
+  white-space: nowrap;
+}
+.allergyItems2 {
+  cursor: pointer;
+  border: 1px solid var(--gray2);
+  padding: var(--padding-sm) var(--padding-17xl);
+  background-color: transparent;
+  margin: 0 !important;
+  position: absolute;
+  top: 0;
+  left: 17.313rem;
+  border-radius: var(--br-31xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.div6 {
+  position: relative;
+  font-size: var(--font-size-xl);
+  line-height: 1.5rem;
+  font-weight: 500;
+  font-family: var(--font-pretendard);
+  color: var(--gray1);
+  text-align: left;
+  display: inline-block;
+  min-width: 2.188rem;
+}
+.allergyItems3 {
+  cursor: pointer;
+  border: 1px solid var(--gray2);
+  padding: var(--padding-sm) var(--padding-17xl);
+  background-color: transparent;
+  margin: 0 !important;
+  position: absolute;
+  top: 0;
+  left: 25.938rem;
+  border-radius: var(--br-31xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.div7 {
+  position: relative;
+  font-size: var(--font-size-xl);
+  line-height: 1.5rem;
+  font-weight: 500;
+  font-family: var(--font-pretendard);
+  color: var(--gray1);
+  text-align: left;
+  display: inline-block;
+  min-width: 3.25rem;
+  white-space: nowrap;
+}
+.allergyItems4 {
+  cursor: pointer;
+  border: 1px solid var(--gray2);
+  padding: var(--padding-sm) var(--padding-17xl);
+  background-color: transparent;
+  margin: 0 !important;
+  position: absolute;
+  top: 0;
+  left: 33.5rem;
+  border-radius: var(--br-31xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.div8 {
+  position: relative;
+  line-height: 1.5rem;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 1.25rem;
+}
+.allergyItems5 {
+  width: 5.75rem;
+  margin: 0 !important;
+  position: absolute;
+  top: 4.25rem;
+  left: 0;
+  border-radius: var(--br-31xl);
+  border: 1px solid var(--gray2);
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-sm) var(--padding-16xl);
+}
+.div9 {
+  flex: 1;
+  position: relative;
+  line-height: 1.5rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.allergyItems6 {
+  width: 7.875rem;
+  margin: 0 !important;
+  position: absolute;
+  top: 4.25rem;
+  left: 6.5rem;
+  border-radius: var(--br-31xl);
+  border: 1px solid var(--gray2);
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-sm) var(--padding-17xl);
+}
+.div10 {
+  position: relative;
+  font-size: var(--font-size-xl);
+  line-height: 1.5rem;
+  font-weight: 500;
+  font-family: var(--font-pretendard);
+  color: var(--gray1);
+  text-align: left;
+  display: inline-block;
+  min-width: 3.25rem;
+  white-space: nowrap;
+}
+.allergyItems7,
+.allergyOptions {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.allergyItems7 {
+  cursor: pointer;
+  border: 1px solid var(--gray2);
+  padding: var(--padding-sm) var(--padding-17xl);
+  background-color: transparent;
+  margin: 0 !important;
+  position: absolute;
+  top: 4.25rem;
+  left: 15.125rem;
+  border-radius: var(--br-31xl);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+}
+.allergyOptions {
+  width: 43.125rem;
+  height: 7.75rem;
+  flex-wrap: wrap;
+  position: relative;
+  gap: var(--gap-xs);
+  z-index: 1;
+  font-size: var(--font-size-xl);
+  color: var(--gray1);
+}
+.allergy,
+.allergyOptions,
+.allergyWrapper {
+  display: flex;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.allergyWrapper {
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--gap-11xl);
+}
+.allergy {
+  width: 49.875rem;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 0 var(--padding-12xs);
+  box-sizing: border-box;
+}
+.b2 {
+  flex: 1;
+  position: relative;
+  font-size: var(--font-size-6xl);
+  line-height: 1.5rem;
+  font-weight: 700;
+  font-family: var(--font-pretendard);
+  color: var(--gray1);
+  text-align: left;
+  white-space: nowrap;
+}
+.signup,
+.signupButton {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.signupButton {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-5xl) var(--padding-52xl);
+  background-color: var(--gray2);
+  width: 14.375rem;
+  border-radius: var(--br-xl);
+  overflow: hidden;
+  flex-shrink: 0;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.signupButton:hover {
+  background-color: var(--color-dimgray-200);
+}
+.signup {
+  align-self: stretch;
+  justify-content: center;
+  padding: 0 var(--padding-xl);
+}
+.contentWrapper {
+  width: 58.125rem;
+  border-radius: var(--br-xl);
+  background-color: var(--black);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: var(--padding-48xl) var(--padding-lg) var(--padding-37xl);
+  box-sizing: border-box;
+  gap: var(--gap-45xl);
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-5xl);
+  color: var(--white);
+  font-family: var(--font-pretendard);
+}
+@media screen and (max-width: 950px) {
+  .h2 {
+    font-size: var(--font-size-7xl);
+  }
+  .contentWrapper {
+    gap: var(--gap-13xl);
+    padding-top: var(--padding-25xl);
+    padding-bottom: var(--padding-17xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 700px) {
+  .textboxShortParent {
+    flex-wrap: wrap;
+  }
+  .emailInput {
+    min-width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .b,
+  .h2 {
+    font-size: var(--font-size-lgi);
+  }
+  .campusButtonLabels,
+  .div,
+  .div1,
+  .div2,
+  .labelText,
+  .planeat1234 {
+    font-size: var(--font-size-base);
+  }
+  .campusButtonLabels,
+  .labelText {
+    line-height: 1rem;
+  }
+  .buttonSegment2 {
+    margin-left: 0;
+  }
+  .segmentedButton {
+    flex-wrap: wrap;
+  }
+  .b1 {
+    font-size: var(--font-size-lgi);
+  }
+  .b2,
+  .div10,
+  .div3,
+  .div4,
+  .div5,
+  .div6,
+  .div7,
+  .div8,
+  .div9 {
+    font-size: var(--font-size-base);
+    line-height: 1.188rem;
+  }
+  .b2 {
+    font-size: var(--font-size-xl);
+  }
+  .contentWrapper {
+    gap: var(--gap-base);
+    padding-top: var(--padding-10xl);
+    padding-bottom: var(--padding-4xl);
+    box-sizing: border-box;
+  }
+}

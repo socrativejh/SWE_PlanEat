@@ -1,0 +1,93 @@
+.div,
+.icon {
+  align-self: stretch;
+  position: relative;
+  display: none;
+}
+.icon {
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.div {
+  height: 67.5rem;
+  background: radial-gradient(50% 50%at 50% 50%, #2e3338, #17161d);
+}
+.frameParent,
+.parent {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.parent {
+  flex: 1;
+  background: radial-gradient(50% 50%at 50% 50%, #2e3338, #17161d);
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6.312rem;
+}
+.frameParent {
+  align-self: stretch;
+  flex-direction: row;
+  align-items: flex-start;
+  position: relative;
+}
+.footerBackground {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--dimmer1);
+}
+.planeat2024 {
+  position: relative;
+  line-height: 1.5rem;
+  z-index: 1;
+}
+.footer,
+.home {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+.footer {
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: center;
+  padding: var(--padding-62xl) var(--padding-xl) var(--padding-63xl);
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--white);
+  font-family: var(--font-pretendard);
+}
+.home {
+  width: 100%;
+  background-color: var(--background);
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 61.312rem;
+  line-height: normal;
+  letter-spacing: normal;
+}
+@media screen and (max-width: 1050px) {
+  .parent {
+    gap: var(--gap-31xl);
+  }
+  .home {
+    gap: 30.625rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  .parent {
+    gap: var(--gap-6xl);
+  }
+  .home {
+    gap: 15.313rem;
+  }
+}

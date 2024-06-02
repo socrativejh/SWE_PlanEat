@@ -2,8 +2,23 @@ from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 from app.api.api_v1.api import api_router
 from app.db.mongodb import connect_to_mongo, close_mongo_connection
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+# CORS 설정
+origins = [
+    "http://localhost:3000",  # React 앱이 실행되는 도메인
+    "http://127.0.0.1:3000",  # 추가로 허용할 도메인
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.on_event("startup")
 async def startup_db_client():

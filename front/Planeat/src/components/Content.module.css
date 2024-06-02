@@ -1,0 +1,811 @@
+.nameBackground {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 3.5rem;
+  right: -8.687rem;
+  bottom: -3.5rem;
+  left: 8.688rem;
+  backdrop-filter: blur(20px);
+  border-radius: var(--br-11xl);
+  background-color: var(--color-gray-200);
+  transform: rotate(180deg);
+  transform-origin: 0 0;
+  z-index: 1;
+}
+.div {
+  align-self: stretch;
+  position: relative;
+  line-height: 1.5rem;
+  font-weight: 500;
+  white-space: nowrap;
+  z-index: 2;
+}
+.wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-5xs) 0 0;
+}
+.newBackground {
+  position: absolute;
+  top: 2.5rem;
+  left: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--purple1);
+  width: 100%;
+  height: 100%;
+  transform: rotate(180deg);
+  transform-origin: 0 0;
+  z-index: 2;
+}
+.newIconChild,
+.newIconItem {
+  position: absolute;
+  object-fit: contain;
+}
+.newIconChild {
+  top: 0.875rem;
+  left: 1.25rem;
+  width: 0;
+  height: 0.75rem;
+  z-index: 3;
+}
+.newIconItem {
+  top: 1.25rem;
+  left: 0.875rem;
+  width: 0.75rem;
+  height: 0;
+  z-index: 4;
+}
+.newIcon {
+  height: 2.5rem;
+  width: 2.5rem;
+  position: relative;
+}
+.restaurantName {
+  width: 8.688rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-5xs) var(--padding-3xs) var(--padding-5xs)
+    var(--padding-3xl);
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-xl);
+}
+.frameChild {
+  height: 15.188rem;
+  width: 17.5rem;
+  position: relative;
+  backdrop-filter: blur(20px);
+  border-radius: var(--br-xl);
+  background-color: var(--dimmer1);
+  display: none;
+}
+.p,
+.p1,
+.p2,
+.p3,
+.p4,
+.p5 {
+  margin-block-start: 0;
+  margin-block-end: 6px;
+}
+.p6 {
+  margin: 0;
+}
+.div1 {
+  height: 12.75rem;
+  flex: 1;
+  position: relative;
+  line-height: 1.5rem;
+  font-weight: 500;
+  display: inline-block;
+  z-index: 1;
+}
+.span {
+  letter-spacing: -0.02em;
+}
+.div2 {
+  position: relative;
+  line-height: 1.5rem;
+  display: inline-block;
+  min-width: 3.313rem;
+  z-index: 1;
+}
+.menuPrice {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-161xl) 0 0;
+  font-size: var(--font-size-sm);
+}
+.menuPrice,
+.rectangleParent,
+.restaurantInfo {
+  display: flex;
+  justify-content: flex-start;
+}
+.rectangleParent {
+  align-self: stretch;
+  backdrop-filter: blur(20px);
+  border-radius: var(--br-xl);
+  background-color: var(--dimmer1);
+  flex-direction: row;
+  align-items: flex-start;
+  padding: var(--padding-lg) var(--padding-13xl) var(--padding-2xl);
+  gap: var(--gap-lgi);
+  z-index: 1;
+}
+.restaurantInfo {
+  width: 17.5rem;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--gap-xs);
+}
+.frameItem {
+  height: 3.5rem;
+  width: 8.688rem;
+  position: relative;
+  backdrop-filter: blur(20px);
+  border-radius: var(--br-11xl);
+  background-color: var(--color-gray-200);
+  display: none;
+}
+.otherIconBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: var(--purple1);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.otherRestaurantIconChild {
+  position: absolute;
+  top: 0.875rem;
+  left: 1.25rem;
+  width: 0;
+  height: 0.75rem;
+  z-index: 2;
+}
+.otherRestaurantIconItem {
+  position: absolute;
+  top: 1.25rem;
+  left: 0.875rem;
+  width: 0.75rem;
+  height: 0;
+  object-fit: contain;
+  z-index: 3;
+}
+.otherRestaurantIcon {
+  height: 2.5rem;
+  width: 2.5rem;
+  position: relative;
+}
+.div3 {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--font-size-lg);
+  letter-spacing: -0.02em;
+  line-height: 1.5rem;
+  font-weight: 500;
+  font-family: var(--font-pretendard);
+  color: var(--white);
+  text-align: left;
+  white-space: nowrap;
+  z-index: 1;
+}
+.otherRestaurantName,
+.rectangleGroup {
+  width: 2.875rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-5xs) 0 0;
+  box-sizing: border-box;
+}
+.rectangleGroup {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-5xs) var(--padding-3xs);
+  background-color: var(--color-gray-200);
+  width: 8.688rem;
+  backdrop-filter: blur(20px);
+  border-radius: var(--br-11xl);
+  flex-direction: row;
+  gap: var(--gap-mid);
+  z-index: 1;
+}
+.frameInner {
+  height: 3.75rem;
+  width: 17.5rem;
+  position: relative;
+  backdrop-filter: blur(20px);
+  border-radius: var(--br-xl);
+  background-color: var(--dimmer1);
+  display: none;
+}
+.span1 {
+  letter-spacing: -0.02em;
+}
+.div4 {
+  width: 7.813rem;
+  position: relative;
+  line-height: 1.5rem;
+  font-weight: 500;
+  display: inline-block;
+  white-space: nowrap;
+  z-index: 1;
+}
+.span2 {
+  letter-spacing: -0.02em;
+}
+.div5 {
+  position: relative;
+  font-size: var(--font-size-sm);
+  line-height: 1.5rem;
+  display: inline-block;
+  min-width: 3.313rem;
+  z-index: 1;
+}
+.rectangleContainer,
+.rectangleDiv {
+  backdrop-filter: blur(20px);
+  border-radius: var(--br-xl);
+  background-color: var(--dimmer1);
+}
+.rectangleContainer {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: var(--padding-lg) var(--padding-13xl);
+  gap: var(--gap-xl);
+  z-index: 2;
+}
+.rectangleDiv {
+  height: 3.75rem;
+  width: 17.5rem;
+  position: relative;
+  display: none;
+}
+.div6 {
+  width: 6.813rem;
+  position: relative;
+  line-height: 1.5rem;
+  font-weight: 500;
+  display: inline-block;
+  white-space: nowrap;
+  z-index: 1;
+}
+.span3 {
+  letter-spacing: -0.02em;
+}
+.div7 {
+  position: relative;
+  font-size: var(--font-size-sm);
+  line-height: 1.5rem;
+  display: inline-block;
+  min-width: 3.313rem;
+  z-index: 1;
+}
+.groupDiv {
+  align-self: stretch;
+  backdrop-filter: blur(20px);
+  border-radius: var(--br-xl);
+  background-color: var(--dimmer1);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: var(--padding-lg) var(--padding-13xl);
+  gap: var(--gap-xl);
+  z-index: 2;
+}
+.restaurantOptions {
+  align-self: stretch;
+  gap: var(--gap-7xs);
+}
+.otherRestaurantList,
+.otherRestaurants,
+.restaurantOptions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.otherRestaurantList {
+  align-self: stretch;
+  gap: var(--gap-xs);
+}
+.otherRestaurants {
+  width: 17.5rem;
+  padding: var(--padding-33xl) 0 0;
+  box-sizing: border-box;
+}
+.restaurantDetails {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.icon {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  object-fit: contain;
+  position: absolute;
+  left: -0.125rem;
+  top: 0.5rem;
+  transform: scale(1.102);
+}
+.adBackground,
+.wrapper1 {
+  position: absolute;
+  margin: 0 !important;
+}
+.wrapper1 {
+  height: 27.563rem;
+  width: 70.825rem;
+  top: -15.125rem;
+  right: -64.762rem;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.adBackground {
+  height: 100%;
+  width: 100%;
+  top: 3.5rem;
+  right: -8.687rem;
+  bottom: -3.5rem;
+  left: 8.688rem;
+  border-radius: var(--br-11xl);
+  background-color: var(--black);
+  transform: rotate(180deg);
+  transform-origin: 0 0;
+}
+.div9 {
+  align-self: stretch;
+  position: relative;
+  line-height: 1.5rem;
+  font-weight: 500;
+  white-space: nowrap;
+  z-index: 1;
+}
+.adTitle {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-5xs) 0 0;
+}
+.adIconBackground {
+  position: absolute;
+  top: 2.5rem;
+  left: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--purple1);
+  width: 100%;
+  height: 100%;
+  transform: rotate(180deg);
+  transform-origin: 0 0;
+  z-index: 1;
+}
+.adIconChild,
+.adIconItem {
+  position: absolute;
+  object-fit: contain;
+}
+.adIconChild {
+  top: 0.875rem;
+  left: 1.25rem;
+  width: 0;
+  height: 0.75rem;
+  z-index: 2;
+}
+.adIconItem {
+  top: 1.25rem;
+  left: 0.875rem;
+  width: 0.75rem;
+  height: 0;
+  z-index: 3;
+}
+.adIcon,
+.div8 {
+  position: relative;
+}
+.adIcon {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+.div8 {
+  width: 8.688rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-5xs) var(--padding-3xs) var(--padding-5xs)
+    var(--padding-3xl);
+  box-sizing: border-box;
+  gap: var(--gap-xl);
+  z-index: 2;
+}
+.container,
+.restaurant,
+.restaurantWrapper {
+  display: flex;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.container {
+  width: 40.688rem;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 var(--padding-xl);
+  box-sizing: border-box;
+}
+.restaurant,
+.restaurantWrapper {
+  justify-content: flex-start;
+}
+.restaurant {
+  width: 102.5rem;
+  flex-direction: column;
+  gap: var(--gap-56xl);
+}
+.restaurantWrapper {
+  align-self: stretch;
+  flex-direction: row;
+}
+.b {
+  position: relative;
+  font-size: var(--font-size-lg);
+  line-height: 1.5rem;
+  font-weight: 700;
+  font-family: var(--font-pretendard);
+  color: var(--white);
+  text-align: left;
+  display: inline-block;
+  min-width: 3.938rem;
+  white-space: nowrap;
+}
+.filterButtons {
+  cursor: pointer;
+  border: 1px solid var(--white);
+  padding: var(--padding-sm) var(--padding-17xl);
+  background-color: transparent;
+  flex: 1;
+  border-radius: var(--br-31xl);
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-width: 5.563rem;
+  z-index: 1;
+}
+.filterButtons:hover {
+  background-color: var(--color-gainsboro-200);
+  border: 1px solid var(--color-gainsboro-100);
+  box-sizing: border-box;
+}
+.b1 {
+  flex: 1;
+  position: relative;
+  font-size: var(--font-size-lg);
+  line-height: 1.5rem;
+  font-weight: 600;
+  font-family: var(--font-pretendard);
+  color: var(--black);
+  text-align: left;
+  white-space: nowrap;
+}
+.filterButtons1 {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-base) var(--padding-18xl);
+  background-color: var(--purple1);
+  width: 7.563rem;
+  border-radius: var(--br-31xl);
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.filterButtons1:hover {
+  background-color: var(--color-darkorchid-100);
+}
+.b2 {
+  flex: 1;
+  position: relative;
+  font-size: var(--font-size-lg);
+  line-height: 1.5rem;
+  font-weight: 600;
+  font-family: var(--font-pretendard);
+  color: var(--white);
+  text-align: left;
+  white-space: nowrap;
+}
+.filterButtons2 {
+  cursor: pointer;
+  border: 1px solid var(--gray1);
+  padding: var(--padding-sm) var(--padding-17xl);
+  background-color: transparent;
+  width: 7.563rem;
+  border-radius: var(--br-31xl);
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 1;
+}
+.filterButtons2:hover,
+.filterButtons3:hover,
+.filterButtons4:hover,
+.filterButtons5:hover {
+  background-color: var(--color-gray-300);
+  border: 1px solid var(--color-gray-100);
+  box-sizing: border-box;
+}
+.b3 {
+  position: relative;
+  font-size: var(--font-size-lg);
+  line-height: 1.5rem;
+  font-weight: 600;
+  font-family: var(--font-pretendard);
+  color: var(--white);
+  text-align: left;
+  display: inline-block;
+  min-width: 3.938rem;
+  white-space: nowrap;
+}
+.filterButtons3 {
+  cursor: pointer;
+  border: 1px solid var(--gray1);
+  padding: var(--padding-sm) var(--padding-17xl);
+  background-color: transparent;
+  flex: 1;
+  border-radius: var(--br-31xl);
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-width: 5.563rem;
+  z-index: 1;
+}
+.b4 {
+  flex: 1;
+  position: relative;
+  font-size: var(--font-size-lg);
+  line-height: 1.5rem;
+  font-weight: 600;
+  font-family: var(--font-pretendard);
+  color: var(--white);
+  text-align: left;
+}
+.filterButtons4 {
+  cursor: pointer;
+  border: 1px solid var(--gray1);
+  padding: var(--padding-sm) var(--padding-15xl);
+  background-color: transparent;
+  width: 6.625rem;
+  border-radius: var(--br-31xl);
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 1;
+}
+.b5 {
+  position: relative;
+  font-size: var(--font-size-lg);
+  line-height: 1.5rem;
+  font-weight: 600;
+  font-family: var(--font-pretendard);
+  color: var(--white);
+  text-align: left;
+  display: inline-block;
+  min-width: 2.25rem;
+}
+.filterButtons5,
+.filterOptions,
+.filters {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.filterButtons5 {
+  cursor: pointer;
+  border: 1px solid var(--gray1);
+  padding: var(--padding-sm) var(--padding-15xl);
+  background-color: transparent;
+  border-radius: var(--br-31xl);
+  overflow: hidden;
+  justify-content: flex-start;
+  z-index: 1;
+}
+.filterOptions,
+.filters {
+  max-width: 100%;
+}
+.filterOptions {
+  width: 51.125rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--gap-lg);
+}
+.filters {
+  align-self: stretch;
+  justify-content: flex-start;
+}
+.toggleBackground,
+.toggleSwitch {
+  position: absolute;
+  margin: 0 !important;
+}
+.toggleBackground {
+  height: 6.625rem;
+  width: 4rem;
+  top: -3.687rem;
+  right: -1.125rem;
+  box-shadow: 2px 2px 10px rgba(49, 49, 49, 0.3);
+  border-radius: var(--br-980xl);
+  background-color: var(--gray3);
+}
+.toggleSwitch {
+  height: 3.313rem;
+  width: 3.313rem;
+  top: -0.75rem;
+  left: calc(50% - 26.5px);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1) inset;
+  border-radius: 50%;
+  background-color: var(--purple1);
+  z-index: 1;
+}
+.b6 {
+  height: 1.875rem;
+  position: relative;
+  letter-spacing: -0.06em;
+  font-weight: 700;
+  display: inline-block;
+  min-width: 1.813rem;
+  z-index: 2;
+}
+.toggleContent,
+.toggleContentWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.toggleContent {
+  flex-direction: row;
+  position: relative;
+}
+.toggleContentWrapper {
+  flex-direction: column;
+  padding: var(--padding-22xl) 0 0;
+}
+.b7 {
+  height: 1.438rem;
+  width: 1.438rem;
+  position: relative;
+  letter-spacing: -0.06em;
+  font-weight: 700;
+  color: var(--color-gray-400);
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 1;
+  margin-left: -1.625rem;
+}
+.filtersParent,
+.toggle {
+  justify-content: flex-start;
+}
+.toggle {
+  width: 4.75rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: var(--padding-lg) var(--padding-mid) var(--padding-15xl);
+  box-sizing: border-box;
+  z-index: 1;
+}
+.filtersParent {
+  width: 92.5rem;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--gap-base);
+  text-align: center;
+  font-size: var(--font-size-11xl);
+  font-family: var(--font-gmarket-sans);
+}
+.content,
+.filtersParent,
+.frameParent {
+  display: flex;
+  max-width: 100%;
+}
+.frameParent {
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: var(--gap-223xl);
+}
+.content {
+  width: 118.125rem;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0 var(--padding-46xl);
+  box-sizing: border-box;
+  text-align: left;
+  font-size: var(--font-size-lg);
+  color: var(--white);
+  font-family: var(--font-pretendard);
+}
+@media screen and (max-width: 1200px) {
+  .frameParent {
+    gap: var(--gap-102xl);
+  }
+  .content {
+    padding-left: var(--padding-13xl);
+    padding-right: var(--padding-13xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .b6,
+  .b7 {
+    font-size: var(--font-size-5xl);
+  }
+}
+@media screen and (max-width: 750px) {
+  .restaurantDetails {
+    flex-wrap: wrap;
+  }
+  .restaurant {
+    gap: var(--gap-18xl);
+  }
+  .frameParent {
+    gap: var(--gap-41xl);
+  }
+}
+@media screen and (max-width: 450px) {
+  .restaurant {
+    gap: var(--gap-lgi);
+  }
+  .b6,
+  .b7 {
+    font-size: var(--font-size-lg);
+  }
+  .frameParent {
+    gap: var(--gap-11xl);
+  }
+}

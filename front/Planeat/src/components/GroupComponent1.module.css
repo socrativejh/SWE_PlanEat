@@ -1,0 +1,64 @@
+.frameChild {
+  width: 13.125rem;
+  height: 16.125rem;
+  position: relative;
+  backdrop-filter: blur(20px);
+  border-radius: var(--br-xl);
+  background-color: var(--dimmer1);
+  display: none;
+}
+.p,
+.p1,
+.p2,
+.p3 {
+  margin-block-start: 0;
+  margin-block-end: 6px;
+}
+.p4 {
+  margin: 0;
+}
+.div,
+.h3 {
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 1.5rem;
+  display: inline-block;
+  z-index: 1;
+}
+.h3 {
+  margin: 0;
+  align-self: stretch;
+  height: 10.125rem;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+  flex-shrink: 0;
+}
+.div {
+  font-size: var(--font-size-base);
+  color: var(--gray1);
+  min-width: 3.375rem;
+}
+.rectangleParent {
+  width: 13.125rem;
+  backdrop-filter: blur(20px);
+  border-radius: var(--br-xl);
+  background-color: var(--dimmer1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-5xl) var(--padding-xl);
+  box-sizing: border-box;
+  gap: var(--gap-5xl);
+  text-align: left;
+  font-size: var(--font-size-3xl);
+  color: var(--white);
+  font-family: var(--font-pretendard);
+}
+@media screen and (max-width: 450px) {
+  .h3 {
+    font-size: var(--font-size-lg);
+    line-height: 1.188rem;
+  }
+}

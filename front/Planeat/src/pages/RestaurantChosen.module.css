@@ -1,0 +1,186 @@
+.menuItemsIcon {
+  align-self: stretch;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.b {
+  flex: 1;
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 100%;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.frameGroup,
+.menuItems,
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.wrapper {
+  width: 8.688rem;
+  flex-direction: row;
+  padding: 0 var(--padding-3xs);
+  box-sizing: border-box;
+}
+.frameGroup,
+.menuItems {
+  align-self: stretch;
+}
+.frameGroup {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--gap-11xl);
+}
+.menuItems {
+  flex-direction: column;
+  gap: var(--gap-21xl);
+}
+.menuItemsIcon1 {
+  align-self: stretch;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.b1 {
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 100%;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 4.5rem;
+  white-space: nowrap;
+}
+.container,
+.frameContainer,
+.menuItems1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.container {
+  flex-direction: row;
+  padding: 0 var(--padding-3xs);
+}
+.frameContainer,
+.menuItems1 {
+  align-self: stretch;
+}
+.frameContainer {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--gap-11xl);
+}
+.menuItems1 {
+  flex-direction: column;
+  gap: var(--gap-21xl);
+}
+.frameParent,
+.restaurantChosenInner {
+  display: flex;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.frameParent {
+  width: 73.188rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 4.968rem;
+  text-align: left;
+  font-size: var(--font-size-9xl);
+  color: var(--gray1);
+  font-family: var(--font-pretendard);
+}
+.restaurantChosenInner {
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 var(--padding-xl) 6.25rem var(--padding-2xl);
+  box-sizing: border-box;
+}
+.footerChild {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--dimmer1);
+}
+.planeat2024 {
+  position: relative;
+  line-height: 1.5rem;
+  z-index: 1;
+}
+.footer,
+.restaurantChosen {
+  position: relative;
+  display: flex;
+}
+.footer {
+  align-self: stretch;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: var(--padding-62xl) var(--padding-xl) var(--padding-63xl);
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--white);
+  font-family: var(--font-pretendard);
+}
+.restaurantChosen {
+  width: 100%;
+  background-color: var(--background);
+  overflow: hidden;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: var(--gap-61xl);
+  line-height: normal;
+  letter-spacing: normal;
+}
+@media screen and (max-width: 1200px) {
+  .frameParent {
+    gap: var(--gap-21xl);
+  }
+  .restaurantChosenInner {
+    padding-bottom: var(--padding-46xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .restaurantChosenInner {
+    padding-bottom: 2.625rem;
+    box-sizing: border-box;
+  }
+  .restaurantChosen {
+    gap: var(--gap-21xl);
+  }
+}
+@media screen and (max-width: 750px) {
+  .frameParent,
+  .menuItems,
+  .menuItems1 {
+    gap: var(--gap-xl);
+  }
+  .restaurantChosenInner {
+    padding-bottom: var(--padding-8xl);
+    box-sizing: border-box;
+  }
+  .restaurantChosen {
+    gap: var(--gap-xl);
+  }
+}
+@media screen and (max-width: 450px) {
+  .b,
+  .b1 {
+    font-size: var(--font-size-3xl);
+    line-height: 1.375rem;
+  }
+}

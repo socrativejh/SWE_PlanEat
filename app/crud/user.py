@@ -1,5 +1,4 @@
 from app.db.mongodb import database
-from bson import ObjectId
 
 async def create_user(user_data: dict):
     user = await database.db['users'].insert_one(user_data)

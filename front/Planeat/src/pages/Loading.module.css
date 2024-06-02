@@ -1,0 +1,131 @@
+.frameChild {
+  position: absolute;
+  top: 0;
+  left: -5.25rem;
+  width: 126.563rem;
+  height: 69.75rem;
+}
+.frameInner,
+.frameItem {
+  position: absolute;
+  top: 32.819rem;
+  left: -3.281rem;
+  width: 127.438rem;
+  height: 34.369rem;
+  z-index: 1;
+}
+.frameInner {
+  top: 32.888rem;
+  left: -1.469rem;
+  width: 124.125rem;
+  height: 30.675rem;
+  z-index: 2;
+}
+.vectorParent {
+  width: 100%;
+  height: 59.5rem;
+  position: absolute;
+  margin: 0 !important;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.b,
+.h3 {
+  position: relative;
+  font-weight: 700;
+}
+.h3 {
+  margin: 0;
+  width: 49.25rem;
+  height: 3.563rem;
+  font-size: inherit;
+  line-height: 4rem;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  z-index: 1;
+}
+.b {
+  flex: 1;
+  font-size: var(--font-size-13xl);
+  line-height: 1.5rem;
+  font-family: var(--font-pretendard);
+  color: var(--white);
+  text-align: left;
+  white-space: nowrap;
+}
+.loadingInner,
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.wrapper {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-5xl) 3.687rem;
+  background-color: #823bd9;
+  width: 14.375rem;
+  box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.25);
+  border-radius: var(--br-xl);
+  overflow: hidden;
+  flex-shrink: 0;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.wrapper:hover {
+  background-color: #a861ff;
+}
+.loadingInner {
+  width: 49.25rem;
+  justify-content: center;
+  max-width: 100%;
+}
+.loading {
+  width: 100%;
+  position: relative;
+  background-color: var(--background);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 22.125rem var(--padding-xl) 32.312rem;
+  box-sizing: border-box;
+  gap: var(--gap-61xl);
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  font-size: 3rem;
+  color: var(--white);
+  font-family: var(--font-pretendard);
+}
+@media screen and (max-width: 825px) {
+  .h3 {
+    font-size: 2.375rem;
+  }
+  .b {
+    font-size: var(--font-size-7xl);
+    line-height: 1.188rem;
+  }
+  .loading {
+    gap: var(--gap-21xl);
+    height:100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .h3 {
+    font-size: 1.813rem;
+  }
+  .b {
+    font-size: var(--font-size-lgi);
+    line-height: 0.875rem;
+  }
+  .loading {
+    gap: var(--gap-xl);
+  }
+}

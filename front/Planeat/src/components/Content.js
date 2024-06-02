@@ -126,7 +126,7 @@ const Content = ({ className = "" }) => {
           </div>
         </div>
         <div className={styles.filtersParent}>
-          <div className={styles.filters}>
+          {/* <div className={styles.filters}>
             <div className={styles.filterOptions}>
               <button
                 className={styles.filterButtons}
@@ -150,7 +150,7 @@ const Content = ({ className = "" }) => {
                 <b className={styles.b5}>저당</b>
               </button>
             </div>
-          </div>
+          </div> */}
           <div className={styles.toggle}>
             <div className={styles.toggleContentWrapper}>
               <div className={styles.toggleContent}>

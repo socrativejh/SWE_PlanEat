@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import React, { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import FrameComponent from "../components/FrameComponent";
 import Header from "../components/Header";
@@ -20,7 +20,6 @@ const Home = () => {
     <div className={styles.home}>
       <img className={styles.icon} alt="" src="/-1--1@2x.png" />
       <section className={styles.frameParent}>
-        <FrameComponent />
         <div className={styles.parent}>
           <div className={styles.div} />
           <Header
@@ -29,6 +28,7 @@ const Home = () => {
             onUserIconClick={onUserIconClick}
           />
           <Content />
+          <FrameComponent />
         </div>
       </section>
       <footer className={styles.footer}>

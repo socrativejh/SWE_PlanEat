@@ -1,95 +1,88 @@
-.frameChild {
-  width: 13.125rem;
-  height: 17.5rem;
-  position: relative;
-  backdrop-filter: blur(20px);
-  border-radius: var(--br-xl);
-  background-color: var(--dimmer1);
-  display: none;
-}
-.div {
-  position: relative;
-  line-height: 1.5rem;
-  display: inline-block;
-  min-width: 2.625rem;
-  white-space: nowrap;
-  z-index: 1;
-}
-.p,
-.p1,
-.p2,
-.p3 {
-  margin-block-start: 0;
-  margin-block-end: 6px;
-}
-.h3,
-.p4 {
-  margin: 0;
-}
-.h3 {
-  height: 9rem;
-  position: relative;
-  font-size: var(--font-size-3xl);
-  letter-spacing: -0.02em;
-  line-height: 1.5rem;
-  font-weight: 400;
-  font-family: inherit;
-  color: var(--white);
-  display: inline-block;
-  flex-shrink: 0;
-  z-index: 1;
-}
-.parent {
-  align-self: stretch;
+.container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: var(--gap-base);
 }
-.div1 {
-  position: relative;
-  letter-spacing: -0.02em;
-  line-height: 1.5rem;
-  display: inline-block;
-  min-width: 3.375rem;
-  z-index: 1;
-}
-.frameParent,
-.rectangleParent {
+
+.filters {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.rectangleParent {
-  width: 13.125rem;
-  backdrop-filter: blur(20px);
-  border-radius: var(--br-xl);
-  background-color: var(--dimmer1);
-  flex-direction: column;
-  padding: var(--padding-5xl) var(--padding-xl);
-  box-sizing: border-box;
-  gap: var(--gap-5xl);
-}
-.frameParent {
-  width: 73.125rem;
-  margin: 0 !important;
-  position: absolute;
-  bottom: -11.312rem;
-  left: calc(50% - 585px);
+  justify-content: flex-start; /* 왼쪽 정렬 설정 */
+  align-items: center;
   flex-direction: row;
-  flex-wrap: wrap;
-  gap: var(--gap-11xl);
-  max-width: 100%;
-  z-index: 1;
-  text-align: left;
-  font-size: var(--font-size-base);
-  color: var(--gray1);
-  font-family: var(--font-pretendard);
+  width: 100%;
+  margin-left: 20px; /* 필요한 경우 화면 왼쪽에 공간 추가 */
 }
-@media screen and (max-width: 450px) {
-  .h3 {
-    font-size: var(--font-size-lg);
-    line-height: 1.188rem;
-  }
+
+.filterOptions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.filterButtons {
+  cursor: pointer;
+  border: 1px solid #a8a8a8;
+  padding: 16px 40px;
+  background-color: transparent;
+  border-radius: var(--br-31xl);
+  font-size: 16px;
+  color: white;
+}
+
+.filterButtons.selected {
+  background-color: #702cc3;
+  color: black;
+  border-color: #702cc3;
+}
+
+.menuList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.menuItem {
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: var(--br-3xs);
+  background-color: var(--black);
+  color: white;
+  width: calc(20% - 15px); /* 5개씩 배치되도록 설정 */
+  box-sizing: border-box;
+  text-align: center;
+  height: 200px; /* 카드 높이 설정 */
+  display: flex;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.menuItem:hover {
+  background-color: var(--color-dimgray-300);
+  border-color: var(--color-dimgray-200);
+}
+
+.menuContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 왼쪽 정렬 */
+  height: 100%;
+}
+
+.restaurantName {
+  color: #a8a8a8;
+  margin-top: 5px;
+  margin-bottom: 6px;
+  flex: 1;
+}
+
+.menuName {
+  margin: 5px 0;
+  flex: 5;
+  font-size: 16px;
+}
+
+.menuPrice {
+  flex: 1;
+  color: #a8a8a8;
+  margin-top: 10px;
 }

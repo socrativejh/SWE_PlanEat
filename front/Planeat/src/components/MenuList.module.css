@@ -1,0 +1,66 @@
+.container {
+  position: relative;
+  display: inline-block;
+  width: 114px;
+}
+
+.toggleContainer {
+  display: flex;
+  align-items: center;
+  border-radius: 1.875rem;
+  background: rgba(0, 0, 0, 0.80);
+  backdrop-filter: blur(10px);
+  padding: 5px 10px;
+  width: 7rem;
+  height: 3rem;
+  flex-shrink: 0;
+  padding-left:1.35rem;
+}
+
+.label {
+  color: white;
+  margin-right: 1rem;
+}
+
+.toggleButton {
+  background-color: #702CC3; /* Purple background */
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu {
+  margin-top: 10px;
+  color: white;
+  list-style: none;
+  padding: 10px;
+  width: 200px;
+  border-radius: 1.25rem;
+  background: var(--Dimmer1, rgba(0, 0, 0, 0.30));
+  backdrop-filter: blur(10px);
+}
+
+.menuItem {
+  padding: 8px 10px;
+  border-bottom: 1px solid #555;
+}
+
+.menuItem:last-child {
+  border-bottom: none;
+}
+
+.price {
+  float: right;
+}
+
+.menuItem:hover {
+  background-color: #555;
+}

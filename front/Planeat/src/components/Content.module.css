@@ -1,3 +1,54 @@
+.hidden {
+  display: none;
+}
+
+.HDGLabel{
+  position:absolute;
+  z-index:2;
+  top:3.5rem;
+}
+
+.HORLabel{
+  position:absolute;
+  right:10rem;
+  z-index:2;
+}
+
+.GSJLabel, 
+.GeumJandiLabel{
+  position:relative;
+  left:15rem;
+  z-index:2;
+}
+
+.BGoeulLabel{
+  position:absolute;
+  top:30rem;
+  left:20rem;
+  z-index:2;
+}
+
+.FacultyLabel{
+  position:absolute;
+  top:15rem;
+  right:25rem;
+  z-index:2;
+}
+
+.EunHaengLabel{
+  position:absolute;
+  top:32rem;
+  right:15rem;
+  z-index:2;
+}
+
+.OkRyuLabel{
+  position:absolute;
+  top:12rem;
+  left:45rem;
+  z-index:2;
+}
+
 .nameBackground {
   height: 100%;
   width: 100%;
@@ -146,6 +197,7 @@
   flex-direction: column;
   align-items: flex-end;
   gap: var(--gap-xs);
+  flex-shrink: 0;
 }
 .frameItem {
   height: 3.5rem;
@@ -345,12 +397,12 @@
   z-index: 1;
   object-fit: contain;
   position: absolute;
-  left: -0.125rem;
+  /* left: -0.125rem; */
   top: 0.5rem;
   transform: scale(1.102);
 }
-.adBackground,
-.wrapper1 {
+.adBackground
+{
   position: absolute;
   margin: 0 !important;
 }
@@ -363,6 +415,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  margin: 0 !important;
 }
 .adBackground {
   height: 100%;
@@ -392,44 +446,8 @@
   justify-content: flex-start;
   padding: var(--padding-5xs) 0 0;
 }
-.adIconBackground {
-  position: absolute;
-  top: 2.5rem;
-  left: 2.5rem;
-  border-radius: 50%;
-  background-color: var(--purple1);
-  width: 100%;
-  height: 100%;
-  transform: rotate(180deg);
-  transform-origin: 0 0;
-  z-index: 1;
-}
-.adIconChild,
-.adIconItem {
-  position: absolute;
-  object-fit: contain;
-}
-.adIconChild {
-  top: 0.875rem;
-  left: 1.25rem;
-  width: 0;
-  height: 0.75rem;
-  z-index: 2;
-}
-.adIconItem {
-  top: 1.25rem;
-  left: 0.875rem;
-  width: 0.75rem;
-  height: 0;
-  z-index: 3;
-}
-.adIcon,
 .div8 {
   position: relative;
-}
-.adIcon {
-  height: 2.5rem;
-  width: 2.5rem;
 }
 .div8 {
   width: 8.688rem;
@@ -456,6 +474,7 @@
   justify-content: center;
   padding: 0 var(--padding-xl);
   box-sizing: border-box;
+  z-index:1;
 }
 .restaurant,
 .restaurantWrapper {
@@ -740,6 +759,7 @@
   width: 92.5rem;
   flex-direction: column;
   align-items: flex-end;
+  gap: var(--gap-base);
   text-align: center;
   font-size: var(--font-size-11xl);
   font-family: var(--font-gmarket-sans);

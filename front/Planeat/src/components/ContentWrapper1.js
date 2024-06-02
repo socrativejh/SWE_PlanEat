@@ -1,11 +1,14 @@
 import { useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import styles from "./ContentWrapper1.module.css";
 
 const ContentWrapper1 = ({ className = "" }) => {
+  const navigate = useNavigate();
+  
   const onBackButtonClick = useCallback(() => {
-    // Please sync "Home" to the project
-  }, []);
+    navigate("/")
+  }, [navigate]);
 
   return (
     <section className={[styles.contentWrapper, className].join(" ")}>
@@ -26,11 +29,10 @@ const ContentWrapper1 = ({ className = "" }) => {
           <div className={styles.infoInputs}>
             <div className={styles.emailInput}>
               <div className={styles.textboxShort}>
-                <input
-                  className={styles.text}
-                  placeholder=" PLANEAT1234"
-                  type="text"
-                />
+                <div
+                  className={styles.text}>
+                    PLANEAT1234
+                  </div>
               </div>
               <div className={styles.emailselectbox}>
                 <div className={styles.selectboxBackground} />
@@ -49,9 +51,9 @@ const ContentWrapper1 = ({ className = "" }) => {
               </div>
             </div>
             <div className={styles.textboxLong}>
-              <div className={styles.text1}>
-                <div className={styles.planeat1234}>PLANEAT12341234</div>
-              </div>
+            <div className={styles.text}>
+                PW1234
+                  </div>
             </div>
             <div className={styles.segmentedButton}>
               <div className={styles.buttonSegment1}>

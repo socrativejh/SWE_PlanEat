@@ -42,7 +42,14 @@
   padding: var(--padding-xl) var(--padding-xl) 0 0;
   box-sizing: border-box;
 }
-
+.planeat1234 {
+  flex: 1;
+  position: relative;
+  font-size: var(--font-size-xl);
+  font-family: var(--font-pretendard);
+  color: var(--white);
+  text-align: left;
+}
 .text {
   flex: 1;
   overflow: hidden;
@@ -53,6 +60,30 @@
   padding: var(--padding-xl);
   box-sizing: border-box;
   max-width: 100%;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  height:4rem;
+  font-family: var(--font-pretendard);
+  font-size: var(--font-size-xl);
+  color: var(--white);
+}
+
+.text1 {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  height: 4rem;
+  flex: 1;
+  overflow: hidden;
+  flex-direction: row;
+  padding: var(--padding-xl);
+  box-sizing: border-box;
+  font-family: var(--font-pretendard);
+  font-size: var(--font-size-xl);
+  color: var(--white);
+  min-width: 15.625rem;
 }
 .dropdownBackground,
 .textboxShort {
@@ -69,6 +100,7 @@
   min-width: 13.438rem;
   max-width: 100%;
   z-index: 1;
+  margin-left:0.5rem; 
 }
 .dropdownBackground {
   height: 100%;
@@ -115,13 +147,13 @@
   left: 1.25rem;
   width: 1.5rem;
   height: 0.75rem;
-  cursor: pointer;
+  z-index: 1;
 }
 .dropdown {
   height: 4rem;
   width: 4rem;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 .emailselectbox,
 .inputFields {
@@ -365,22 +397,4 @@
   .rectangleParent {
     gap: var(--gap-16xl);
   }
-}
-.emailselectbox .dropdownMenu {
-  position: absolute;
-  z-index: 1000;
-  width: 100%;
-  border-radius: var(--br-5xs);
-  font-size: var(--font-size-xl);
-  overflow-y: auto;
-}
-
-.emailselectbox .dropdownMenu div {
-  padding: 10px;
-  cursor: pointer;
-}
-
-
-.emailselectbox .dropdownMenu div:hover {
-  background-color: var(--color-dimgray-100);
 }

@@ -6,7 +6,7 @@ const Header1 = ({ className = "", onLogoContainerClick, onUserIconClick }) => {
     <header className={[styles.header, className].join(" ")}>
       <div className={styles.headerChild} />
       <div className={styles.logo} onClick={onLogoContainerClick}>
-        <a className={styles.planeat}>PLANEAT</a>
+        <a href="/" className={styles.planeat}>PLANEAT</a>
       </div>
       <div className={styles.headerContent}>
         <div className={styles.userTime}>

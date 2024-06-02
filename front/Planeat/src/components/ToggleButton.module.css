@@ -1,0 +1,46 @@
+.toggleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px; /* Adjust the height to fit the container */
+}
+
+.ellipse {
+    width: 60px; /* Adjust the width as needed */
+    height: 105px; /* Adjust the height as needed */
+    background-color: #2c2c2c; /* Dark gray background */
+    border-radius: 35px; /* Make it elliptical */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 3px; */
+    position: relative;
+}
+
+.toggleButton {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #6a0dad; /* Purple color when toggled */
+    transition: transform 0.3s, background-color 0.3s;
+    position: absolute;
+    bottom: 5px; /* Position at the bottom initially */
+}
+
+.toggleButton.toggled {
+    transform: translateY(-2px); /* Move up when toggled */
+    background-color: #00d084; /* Green color for the initial state */
+    bottom: auto; /* Reset bottom position */
+    top: 5px; /* Position at the top when toggled */
+}
+
+.toggleLabel {
+    color: #fff; /* White text */
+    font-size: 16px;
+    font-weight: bold;
+}

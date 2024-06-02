@@ -82,6 +82,7 @@ function App() {
       <Route path="/sign-in" element={<SignIn />} />
       <Route path="/log-in" element={<LogIn />} />
       <Route path="/my-page" element={<MyPage />} />
+      <Route path="*" element={<div>Page Not Found</div>} />
     </Routes>
   );
 }

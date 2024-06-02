@@ -1,0 +1,43 @@
+.container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .toggleButton {
+    background-color: #A276FF; /* Purple background */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .menu {
+    position: absolute;
+    background-color: #333;
+    color: white;
+    list-style: none;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    width: 200px;
+  }
+  
+  .menuItem {
+    padding: 8px 10px;
+    border-bottom: 1px solid #555;
+  }
+  
+  .menuItem:last-child {
+    border-bottom: none;
+  }
+  
+  .price {
+    float: right;
+  }
+  
+  .menuItem:hover {
+    background-color: #555;
+  }
+  

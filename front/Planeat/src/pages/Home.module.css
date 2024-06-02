@@ -7,7 +7,7 @@
   gap: 61.312rem;
   line-height: normal;
   letter-spacing: normal;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .parent {

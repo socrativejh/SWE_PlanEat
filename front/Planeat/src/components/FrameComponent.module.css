@@ -1,15 +1,14 @@
 .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .filters {
   display: flex;
-  justify-content: flex-start; /* 왼쪽 정렬 설정 */
-  align-items: center;
   flex-direction: row;
   width: 100%;
-  margin-left: 20px; /* 필요한 경우 화면 왼쪽에 공간 추가 */
+  margin-left: 560px;
 }
 
 .filterOptions {
@@ -36,24 +35,29 @@
 
 .menuList {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap; /* 요소를 여러 줄로 배치하도록 설정 */
   gap: 25px;
   margin-top: 40px;
+  width: 62%;
+  margin-bottom: 180px;
 }
 
 .menuItem {
-  padding: 15px;
+  padding: 13px;
   border: 1px solid black;
   border-radius: var(--br-3xs);
   background-color: var(--black);
   color: white;
-  width: calc(20% - 15px); /* 5개씩 배치되도록 설정 */
+  width: calc(20% - 20px); /* 5개씩 배치되도록 설정 */
   box-sizing: border-box;
-  text-align: center;
-  height: 200px; /* 카드 높이 설정 */
+  text-align: left;
+  height: 220px; /* 카드 높이 설정 */
   display: flex;
+  flex-direction: column; /* 요소를 세로로 배치 */
+  justify-content: space-between; /* 요소 간의 여백을 동일하게 배분 */
   cursor: pointer;
   transition: background-color 0.3s, border-color 0.3s;
+  overflow: hidden;
 }
 
 .menuItem:hover {
@@ -70,19 +74,27 @@
 
 .restaurantName {
   color: #a8a8a8;
-  margin-top: 5px;
-  margin-bottom: 6px;
+  margin-top: 9px;
+  margin-bottom: 4px;
   flex: 1;
+  text-align: left; /* 텍스트 왼쪽 정렬 */
 }
 
 .menuName {
   margin: 5px 0;
   flex: 5;
-  font-size: 17px;
+  font-size: 16px;
+  text-align: left; /* 텍스트 왼쪽 정렬 */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6; /* 6줄까지만 표시 */
+  overflow: hidden;
+  text-overflow: ellipsis; /* 넘치는 부분에 "..." 표시 */
 }
 
 .menuPrice {
   flex: 1;
   color: #a8a8a8;
   margin-top: 10px;
+  text-align: left; /* 텍스트 왼쪽 정렬 */
 }

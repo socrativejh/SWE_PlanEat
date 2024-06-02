@@ -76,7 +76,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Loading />} />
-      <Route path="/" element={<MenuInfo />} />
+      <Route path="/menu-info" element={<MenuInfo />} />
       <Route path="/home" element={<Home />} />
       <Route path="/restaurant-chosen" element={<RestaurantChosen />} />
       <Route path="/sign-in" element={<SignIn />} />

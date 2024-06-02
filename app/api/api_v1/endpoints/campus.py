@@ -26,4 +26,4 @@ async def read_restaurants_by_campus(campus_id: int):
     restaurants = await crud_restaurant.get_restaurants_by_campus_id(campus_id)
     if not restaurants:
         raise HTTPException(status_code=404, detail="No restaurants found for this campus")
-    return [Restaurant(id=restaurant["_id"], campus_id=restaurant["campus_id"], name=restaurant["name"], location=restaurant["location"], image_url=restaurant["image_url"], menu_ids=restaurant["menu_ids"]) for restaurant in restaurants]
+    return [Restaurant(id=restaurant["_id"], campus_id=restaurant["campus_id"], name=restaurant["name"], restaurant_name=restaurant.get("restaurant_name"), location=restaurant["location"], image_url=restaurant["image_url"], menu_ids=restaurant["menu_ids"]) for restaurant in restaurants]

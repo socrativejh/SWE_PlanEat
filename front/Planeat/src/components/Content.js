@@ -4,17 +4,16 @@ import styles from "./Content.module.css";
 import MenuList from "./MenuList";
 import ToggleButton from "./ToggleButton";
 
-const Content = ({ className = "" }) => {
+const Content = ({ className = "", onToggle }) => {
   const [mapSrc, setMapSrc] = useState("/map_dummy.png");
   const [showMenus, setShowMenus] = useState(true); // State to control the visibility of specific MenuLists
-
-  const onFilterButtonsClick = useCallback(() => {
-    // Please sync "Home" to the project
-  }, []);
 
   const handleToggle = (toggled) => {
     setMapSrc(toggled ? "/myeong_map.png" : "/map_dummy.png");
     setShowMenus(!toggled); // Toggle menu visibility based on the toggle button state
+    if (onToggle) {
+      onToggle(toggled);
+    }
   };
 
   return (
@@ -63,31 +62,6 @@ const Content = ({ className = "" }) => {
           </div>
         </div>
         <div className={styles.filtersParent}>
-          <div className={styles.filters}>
-            <div className={styles.filterOptions}>
-              <button
-                className={styles.filterButtons}
-                onClick={onFilterButtonsClick}
-              >
-                <b className={styles.b}>모두보기</b>
-              </button>
-              <button className={styles.filterButtons1}>
-                <b className={styles.b1}>고단백</b>
-              </button>
-              <button className={styles.filterButtons2}>
-                <b className={styles.b2}>가성비</b>
-              </button>
-              <button className={styles.filterButtons3}>
-                <b className={styles.b3}>저칼로리</b>
-              </button>
-              <button className={styles.filterButtons4}>
-                <b className={styles.b4}>비건</b>
-              </button>
-              <button className={styles.filterButtons5}>
-                <b className={styles.b5}>저당</b>
-              </button>
-            </div>
-          </div>
           <div className={styles.toggle}>
             <ToggleButton labels={['율', '명']} onToggle={handleToggle} />
           </div>
@@ -99,6 +73,7 @@ const Content = ({ className = "" }) => {
 
 Content.propTypes = {
   className: PropTypes.string,
+  onToggle: PropTypes.func,
 };
 
 export default Content;

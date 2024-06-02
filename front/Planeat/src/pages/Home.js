@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import FrameComponent from "../components/FrameComponent";
 import Header from "../components/Header";
@@ -7,6 +7,7 @@ import styles from "./Home.module.css";
 
 const Home = () => {
   const navigate = useNavigate();
+  const [campus, setCampus] = useState("명");
 
   const onLogoContainerClick = useCallback(() => {
     // Please sync "Home" to the project
@@ -16,11 +17,14 @@ const Home = () => {
     navigate("/my-page");
   }, [navigate]);
 
+  const handleToggle = (toggled) => {
+    setCampus(toggled ? "명" : "율");
+  };
+
   return (
     <div className={styles.home}>
       <img className={styles.icon} alt="" src="/-1--1@2x.png" />
       <section className={styles.frameParent}>
-        <FrameComponent />
         <div className={styles.parent}>
           <div className={styles.div} />
           <Header
@@ -28,9 +32,9 @@ const Home = () => {
             onLogoContainerClick={onLogoContainerClick}
             onUserIconClick={onUserIconClick}
           />
-          <Content />
+          <Content onToggle={handleToggle} />
+          <FrameComponent campus={campus} />
         </div>
-
       </section>
       <footer className={styles.footer}>
         <div className={styles.footerBackground} />

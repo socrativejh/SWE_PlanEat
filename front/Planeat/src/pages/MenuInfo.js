@@ -8,8 +8,8 @@ const MenuInfo = () => {
   const navigate = useNavigate();
 
   const onLogoContainerClick = useCallback(() => {
-    navigate("/Home");
-  }, [navigate]);
+    // Please sync "Home" to the project
+  }, []);
 
   const onUserIconClick = useCallback(() => {
     navigate("/my-page");

@@ -122,6 +122,7 @@
 .restaurantChosen {
   position: relative;
   display: flex;
+  background-color: var(--background);
 }
 .footer {
   align-self: stretch;

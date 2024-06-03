@@ -766,8 +766,3 @@
 .emailselectbox .dropdownMenu div:hover {
   background-color: var(--color-dimgray-100);
 }
-.message {
-  margin-top: 20px;
-  color: #702cc3; /* 메시지 텍스트 색상 */
-  font-weight: bold;
-}

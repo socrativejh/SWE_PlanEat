@@ -19,6 +19,7 @@ const Content = ({ className = "", onToggle }) => {
   return (
     <div className={[styles.content, className].join(" ")}>
       <div className={styles.frameParent}>
+        
         <div className={styles.restaurantWrapper}>
           <div className={styles.restaurant}>
             <div className={styles.restaurantDetails}>
@@ -61,11 +62,15 @@ const Content = ({ className = "", onToggle }) => {
             </div>
           </div>
         </div>
+
+
         <div className={styles.filtersParent}>
           <div className={styles.toggle}>
             <ToggleButton labels={['율', '명']} onToggle={handleToggle} />
           </div>
         </div>
+
+
       </div>
     </div>
   );

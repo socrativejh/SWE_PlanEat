@@ -2,51 +2,51 @@
   display: none;
 }
 
-.HDGLabel{
-  position:absolute;
-  z-index:2;
-  top:3.5rem;
+.HDGLabel {
+  position: absolute;
+  z-index: 2;
+  top: 3.5rem;
 }
 
-.HORLabel{
-  position:absolute;
-  right:10rem;
-  z-index:2;
+.HORLabel {
+  position: absolute;
+  right: 10rem;
+  z-index: 2;
 }
 
-.GSJLabel, 
-.GeumJandiLabel{
-  position:relative;
-  left:15rem;
-  z-index:2;
+.GSJLabel,
+.GeumJandiLabel {
+  position: relative;
+  left: 15rem;
+  z-index: 2;
 }
 
-.BGoeulLabel{
-  position:absolute;
-  top:30rem;
-  left:20rem;
-  z-index:2;
+.BGoeulLabel {
+  position: absolute;
+  top: 30rem;
+  left: 20rem;
+  z-index: 2;
 }
 
-.FacultyLabel{
-  position:absolute;
-  top:15rem;
-  right:25rem;
-  z-index:2;
+.FacultyLabel {
+  position: absolute;
+  top: 15rem;
+  right: 25rem;
+  z-index: 2;
 }
 
-.EunHaengLabel{
-  position:absolute;
-  top:32rem;
-  right:15rem;
-  z-index:2;
+.EunHaengLabel {
+  position: absolute;
+  top: 32rem;
+  right: 15rem;
+  z-index: 2;
 }
 
-.OkRyuLabel{
-  position:absolute;
-  top:12rem;
-  left:45rem;
-  z-index:2;
+.OkRyuLabel {
+  position: absolute;
+  top: 12rem;
+  left: 45rem;
+  z-index: 2;
 }
 
 .nameBackground {
@@ -65,6 +65,7 @@
   transform-origin: 0 0;
   z-index: 1;
 }
+
 .div {
   align-self: stretch;
   position: relative;
@@ -73,6 +74,7 @@
   white-space: nowrap;
   z-index: 2;
 }
+
 .wrapper {
   flex: 1;
   display: flex;
@@ -81,6 +83,7 @@
   justify-content: flex-start;
   padding: var(--padding-5xs) 0 0;
 }
+
 .newBackground {
   position: absolute;
   top: 2.5rem;
@@ -93,11 +96,13 @@
   transform-origin: 0 0;
   z-index: 2;
 }
+
 .newIconChild,
 .newIconItem {
   position: absolute;
   object-fit: contain;
 }
+
 .newIconChild {
   top: 0.875rem;
   left: 1.25rem;
@@ -105,6 +110,7 @@
   height: 0.75rem;
   z-index: 3;
 }
+
 .newIconItem {
   top: 1.25rem;
   left: 0.875rem;
@@ -112,11 +118,13 @@
   height: 0;
   z-index: 4;
 }
+
 .newIcon {
   height: 2.5rem;
   width: 2.5rem;
   position: relative;
 }
+
 .restaurantName {
   width: 8.688rem;
   display: flex;
@@ -129,6 +137,7 @@
   position: relative;
   gap: var(--gap-xl);
 }
+
 .frameChild {
   height: 15.188rem;
   width: 17.5rem;
@@ -138,6 +147,7 @@
   background-color: var(--dimmer1);
   display: none;
 }
+
 .p,
 .p1,
 .p2,
@@ -147,9 +157,11 @@
   margin-block-start: 0;
   margin-block-end: 6px;
 }
+
 .p6 {
   margin: 0;
 }
+
 .div1 {
   height: 12.75rem;
   flex: 1;
@@ -159,9 +171,11 @@
   display: inline-block;
   z-index: 1;
 }
+
 .span {
   letter-spacing: -0.02em;
 }
+
 .div2 {
   position: relative;
   line-height: 1.5rem;
@@ -169,18 +183,21 @@
   min-width: 3.313rem;
   z-index: 1;
 }
+
 .menuPrice {
   flex-direction: column;
   align-items: flex-start;
   padding: var(--padding-161xl) 0 0;
   font-size: var(--font-size-sm);
 }
+
 .menuPrice,
 .rectangleParent,
 .restaurantInfo {
   display: flex;
   justify-content: flex-start;
 }
+
 .rectangleParent {
   align-self: stretch;
   backdrop-filter: blur(20px);
@@ -192,6 +209,7 @@
   gap: var(--gap-lgi);
   z-index: 1;
 }
+
 .restaurantInfo {
   width: 17.5rem;
   flex-direction: column;
@@ -199,6 +217,7 @@
   gap: var(--gap-xs);
   flex-shrink: 0;
 }
+
 .frameItem {
   height: 3.5rem;
   width: 8.688rem;
@@ -208,6 +227,7 @@
   background-color: var(--color-gray-200);
   display: none;
 }
+
 .otherIconBackground {
   position: absolute;
   top: 0;
@@ -218,6 +238,7 @@
   height: 100%;
   z-index: 1;
 }
+
 .otherRestaurantIconChild {
   position: absolute;
   top: 0.875rem;
@@ -226,6 +247,7 @@
   height: 0.75rem;
   z-index: 2;
 }
+
 .otherRestaurantIconItem {
   position: absolute;
   top: 1.25rem;
@@ -235,11 +257,13 @@
   object-fit: contain;
   z-index: 3;
 }
+
 .otherRestaurantIcon {
   height: 2.5rem;
   width: 2.5rem;
   position: relative;
 }
+
 .div3 {
   align-self: stretch;
   position: relative;
@@ -253,6 +277,7 @@
   white-space: nowrap;
   z-index: 1;
 }
+
 .otherRestaurantName,
 .rectangleGroup {
   width: 2.875rem;
@@ -263,6 +288,7 @@
   padding: var(--padding-5xs) 0 0;
   box-sizing: border-box;
 }
+
 .rectangleGroup {
   cursor: pointer;
   border: 0;
@@ -275,6 +301,7 @@
   gap: var(--gap-mid);
   z-index: 1;
 }
+
 .frameInner {
   height: 3.75rem;
   width: 17.5rem;
@@ -284,9 +311,11 @@
   background-color: var(--dimmer1);
   display: none;
 }
+
 .span1 {
   letter-spacing: -0.02em;
 }
+
 .div4 {
   width: 7.813rem;
   position: relative;
@@ -296,9 +325,11 @@
   white-space: nowrap;
   z-index: 1;
 }
+
 .span2 {
   letter-spacing: -0.02em;
 }
+
 .div5 {
   position: relative;
   font-size: var(--font-size-sm);
@@ -307,12 +338,14 @@
   min-width: 3.313rem;
   z-index: 1;
 }
+
 .rectangleContainer,
 .rectangleDiv {
   backdrop-filter: blur(20px);
   border-radius: var(--br-xl);
   background-color: var(--dimmer1);
 }
+
 .rectangleContainer {
   align-self: stretch;
   display: flex;
@@ -323,12 +356,14 @@
   gap: var(--gap-xl);
   z-index: 2;
 }
+
 .rectangleDiv {
   height: 3.75rem;
   width: 17.5rem;
   position: relative;
   display: none;
 }
+
 .div6 {
   width: 6.813rem;
   position: relative;
@@ -338,9 +373,11 @@
   white-space: nowrap;
   z-index: 1;
 }
+
 .span3 {
   letter-spacing: -0.02em;
 }
+
 .div7 {
   position: relative;
   font-size: var(--font-size-sm);
@@ -349,6 +386,7 @@
   min-width: 3.313rem;
   z-index: 1;
 }
+
 .groupDiv {
   align-self: stretch;
   backdrop-filter: blur(20px);
@@ -362,10 +400,12 @@
   gap: var(--gap-xl);
   z-index: 2;
 }
+
 .restaurantOptions {
   align-self: stretch;
   gap: var(--gap-7xs);
 }
+
 .otherRestaurantList,
 .otherRestaurants,
 .restaurantOptions {
@@ -374,15 +414,18 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
+
 .otherRestaurantList {
   align-self: stretch;
   gap: var(--gap-xs);
 }
+
 .otherRestaurants {
   width: 17.5rem;
   padding: var(--padding-33xl) 0 0;
   box-sizing: border-box;
 }
+
 .restaurantDetails {
   align-self: stretch;
   display: flex;
@@ -391,6 +434,7 @@
   justify-content: space-between;
   gap: var(--gap-xl);
 }
+
 .icon {
   height: 100%;
   width: 100%;
@@ -401,23 +445,26 @@
   top: 0.5rem;
   transform: scale(1.102);
 }
-.adBackground
-{
+
+.adBackground {
   position: absolute;
   margin: 0 !important;
 }
+
 .wrapper1 {
   height: 27.563rem;
   width: 70.825rem;
-  top: -15.125rem;
-  right: -64.762rem;
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   margin: 0 !important;
 }
+
 .adBackground {
   height: 100%;
   width: 100%;
@@ -430,6 +477,7 @@
   transform: rotate(180deg);
   transform-origin: 0 0;
 }
+
 .div9 {
   align-self: stretch;
   position: relative;
@@ -438,6 +486,7 @@
   white-space: nowrap;
   z-index: 1;
 }
+
 .adTitle {
   flex: 1;
   display: flex;
@@ -446,9 +495,11 @@
   justify-content: flex-start;
   padding: var(--padding-5xs) 0 0;
 }
+
 .div8 {
   position: relative;
 }
+
 .div8 {
   width: 8.688rem;
   display: flex;
@@ -461,34 +512,40 @@
   gap: var(--gap-xl);
   z-index: 2;
 }
+
 .container,
 .restaurant,
 .restaurantWrapper {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   max-width: 100%;
 }
+
 .container {
   width: 40.688rem;
   flex-direction: row;
   justify-content: center;
   padding: 0 var(--padding-xl);
   box-sizing: border-box;
-  z-index:1;
+  z-index: 1;
 }
+
 .restaurant,
 .restaurantWrapper {
-  justify-content: flex-start;
+  justify-content: center;
 }
+
 .restaurant {
   width: 102.5rem;
   flex-direction: column;
   gap: var(--gap-56xl);
 }
+
 .restaurantWrapper {
   align-self: stretch;
   flex-direction: row;
 }
+
 .b {
   position: relative;
   font-size: var(--font-size-lg);
@@ -501,6 +558,7 @@
   min-width: 3.938rem;
   white-space: nowrap;
 }
+
 .filterButtons {
   cursor: pointer;
   border: 1px solid var(--white);
@@ -517,11 +575,13 @@
   min-width: 5.563rem;
   z-index: 1;
 }
+
 .filterButtons:hover {
   background-color: var(--color-gainsboro-200);
   border: 1px solid var(--color-gainsboro-100);
   box-sizing: border-box;
 }
+
 .b1 {
   flex: 1;
   position: relative;
@@ -533,6 +593,7 @@
   text-align: left;
   white-space: nowrap;
 }
+
 .filterButtons1 {
   cursor: pointer;
   border: 0;
@@ -549,9 +610,11 @@
   box-sizing: border-box;
   z-index: 1;
 }
+
 .filterButtons1:hover {
   background-color: var(--color-darkorchid-100);
 }
+
 .b2 {
   flex: 1;
   position: relative;
@@ -563,6 +626,7 @@
   text-align: left;
   white-space: nowrap;
 }
+
 .filterButtons2 {
   cursor: pointer;
   border: 1px solid var(--gray1);
@@ -579,6 +643,7 @@
   justify-content: flex-start;
   z-index: 1;
 }
+
 .filterButtons2:hover,
 .filterButtons3:hover,
 .filterButtons4:hover,
@@ -587,18 +652,20 @@
   border: 1px solid var(--color-gray-100);
   box-sizing: border-box;
 }
+
 .b3 {
   position: relative;
   font-size: var(--font-size-lg);
   line-height: 1.5rem;
   font-weight: 600;
-  font-family: var(--font-pretendard);
+  font-family: var (--font-pretendard);
   color: var(--white);
   text-align: left;
   display: inline-block;
   min-width: 3.938rem;
   white-space: nowrap;
 }
+
 .filterButtons3 {
   cursor: pointer;
   border: 1px solid var(--gray1);
@@ -615,6 +682,7 @@
   min-width: 5.563rem;
   z-index: 1;
 }
+
 .b4 {
   flex: 1;
   position: relative;
@@ -625,6 +693,7 @@
   color: var(--white);
   text-align: left;
 }
+
 .filterButtons4 {
   cursor: pointer;
   border: 1px solid var(--gray1);
@@ -641,6 +710,7 @@
   justify-content: flex-start;
   z-index: 1;
 }
+
 .b5 {
   position: relative;
   font-size: var(--font-size-lg);
@@ -652,6 +722,7 @@
   display: inline-block;
   min-width: 2.25rem;
 }
+
 .filterButtons5,
 .filterOptions,
 .filters {
@@ -659,35 +730,41 @@
   flex-direction: row;
   align-items: flex-start;
 }
+
 .filterButtons5 {
   cursor: pointer;
   border: 1px solid var(--gray1);
   padding: var(--padding-sm) var(--padding-15xl);
   background-color: transparent;
-  border-radius: var(--br-31xl);
+  border-radius: var (--br-31xl);
   overflow: hidden;
   justify-content: flex-start;
   z-index: 1;
 }
+
 .filterOptions,
 .filters {
   max-width: 100%;
 }
+
 .filterOptions {
   width: 51.125rem;
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--gap-lg);
 }
+
 .filters {
   align-self: stretch;
   justify-content: flex-start;
 }
+
 .toggleBackground,
 .toggleSwitch {
   position: absolute;
   margin: 0 !important;
 }
+
 .toggleBackground {
   height: 6.625rem;
   width: 4rem;
@@ -697,6 +774,7 @@
   border-radius: var(--br-980xl);
   background-color: var(--gray3);
 }
+
 .toggleSwitch {
   height: 3.313rem;
   width: 3.313rem;
@@ -707,6 +785,7 @@
   background-color: var(--purple1);
   z-index: 1;
 }
+
 .b6 {
   height: 1.875rem;
   position: relative;
@@ -716,20 +795,24 @@
   min-width: 1.813rem;
   z-index: 2;
 }
+
 .toggleContent,
 .toggleContentWrapper {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
 }
+
 .toggleContent {
   flex-direction: row;
   position: relative;
 }
+
 .toggleContentWrapper {
   flex-direction: column;
   padding: var(--padding-22xl) 0 0;
 }
+
 .b7 {
   height: 1.438rem;
   width: 1.438rem;
@@ -742,10 +825,12 @@
   z-index: 1;
   margin-left: -1.625rem;
 }
+
 .filtersParent,
 .toggle {
   justify-content: flex-start;
 }
+
 .toggle {
   width: 4.75rem;
   display: flex;
@@ -755,6 +840,7 @@
   box-sizing: border-box;
   z-index: 1;
 }
+
 .filtersParent {
   width: 92.5rem;
   flex-direction: column;
@@ -764,12 +850,14 @@
   font-size: var(--font-size-11xl);
   font-family: var(--font-gmarket-sans);
 }
+
 .content,
 .filtersParent,
 .frameParent {
   display: flex;
   max-width: 100%;
 }
+
 .frameParent {
   flex: 1;
   flex-direction: column;
@@ -777,6 +865,7 @@
   justify-content: flex-start;
   gap: var(--gap-223xl);
 }
+
 .content {
   width: 118.125rem;
   flex-direction: row;
@@ -789,41 +878,50 @@
   color: var(--white);
   font-family: var(--font-pretendard);
 }
+
 @media screen and (max-width: 1200px) {
   .frameParent {
     gap: var(--gap-102xl);
   }
+
   .content {
     padding-left: var(--padding-13xl);
     padding-right: var(--padding-13xl);
     box-sizing: border-box;
   }
 }
+
 @media screen and (max-width: 1050px) {
   .b6,
   .b7 {
     font-size: var(--font-size-5xl);
   }
 }
+
 @media screen and (max-width: 750px) {
   .restaurantDetails {
     flex-wrap: wrap;
   }
+
   .restaurant {
     gap: var(--gap-18xl);
   }
+
   .frameParent {
-    gap: var(--gap-41xl);
+    gap: var (--gap-41xl);
   }
 }
+
 @media screen and (max-width: 450px) {
   .restaurant {
     gap: var(--gap-lgi);
   }
+
   .b6,
   .b7 {
     font-size: var(--font-size-lg);
   }
+
   .frameParent {
     gap: var(--gap-11xl);
   }

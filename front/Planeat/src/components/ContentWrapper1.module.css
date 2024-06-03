@@ -43,6 +43,9 @@
   z-index: 1;
 }
 .div {
+  position: relative;
+  line-height: 1.5rem;
+  font-weight: 500;
   display: inline-block;
   min-width: 3.25rem;
 }
@@ -50,9 +53,9 @@
 .div1,
 .div2 {
   position: relative;
-  line-height: 1.688rem;
+  line-height: 1.5rem;
   font-weight: 500;
-  white-space: nowrap;
+  display: inline-block;
   z-index: 1;
 }
 .div1 {
@@ -229,14 +232,13 @@
 }
 .container {
   border-radius: var(--br-5xs) 0 0 var(--br-5xs);
-  background-color: var(--gray2);
   border: 1px solid var(--gray2);
-  padding: var(--padding-xl) var(--padding-25xl);
+  overflow: hidden;
+  padding: var(--padding-xl) var(--padding-38xl);
   gap: var(--gap-5xs);
 }
 .buttonSegment1,
 .container {
-  overflow: hidden;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -338,15 +340,10 @@
 }
 .div3 {
   position: relative;
-  font-size: var(--font-size-xl);
   line-height: 1.5rem;
   font-weight: 500;
-  font-family: var(--font-pretendard);
-  color: var(--gray1);
-  text-align: left;
   display: inline-block;
   min-width: 4.375rem;
-  white-space: nowrap;
 }
 .allergyOptionList {
   border: 1px solid var(--gray2);
@@ -366,14 +363,10 @@
 
 .div4 {
   position: relative;
-  font-size: var(--font-size-xl);
   line-height: 1.5rem;
   font-weight: 500;
-  font-family: var(--font-pretendard);
-  text-align: left;
   display: inline-block;
   min-width: 2.188rem;
-  color: var(--gray1);
 }
 .allergyOptionList1 {
   border: 1px solid var(--gray2);
@@ -393,15 +386,10 @@
 
 .div5 {
   position: relative;
-  font-size: var(--font-size-xl);
   line-height: 1.5rem;
   font-weight: 500;
-  font-family: var(--font-pretendard);
-  color: var(--gray1);
-  text-align: left;
   display: inline-block;
   min-width: 3.25rem;
-  white-space: nowrap;
 }
 .allergyOptionList2 {
   border: 1px solid var(--gray2);
@@ -421,12 +409,8 @@
 
 .div6 {
   position: relative;
-  font-size: var(--font-size-xl);
   line-height: 1.5rem;
   font-weight: 500;
-  font-family: var(--font-pretendard);
-  color: var(--gray1);
-  text-align: left;
   display: inline-block;
   min-width: 2.188rem;
 }
@@ -447,26 +431,22 @@
 }
 .div7 {
   position: relative;
-  font-size: var(--font-size-xl);
   line-height: 1.5rem;
   font-weight: 500;
-  font-family: var(--font-pretendard);
-  color: var(--gray1);
-  text-align: left;
   display: inline-block;
   min-width: 3.25rem;
-  white-space: nowrap;
 }
 .allergyOptionList4 {
   border: 1px solid var(--gray2);
   padding: var(--padding-sm) var(--padding-17xl);
-  background-color: transparent;
   margin: 0 !important;
   position: absolute;
   top: 0;
   left: 33.5rem;
   border-radius: var(--br-31xl);
+  box-sizing: border-box;
   overflow: hidden;
+  flex-shrink: 0;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -497,15 +477,10 @@
   padding: var(--padding-sm) var(--padding-16xl);
 }
 .div9 {
-  flex: 1;
   position: relative;
-  font-size: var(--font-size-xl);
   line-height: 1.5rem;
   font-weight: 500;
-  font-family: var(--font-pretendard);
-  text-align: left;
-  white-space: nowrap;
-  color: var(--gray1);
+  display: inline-block;
 }
 .allergyOptionList6 {
   width: 7.875rem;
@@ -528,15 +503,10 @@
 
 .div10 {
   position: relative;
-  font-size: var(--font-size-xl);
   line-height: 1.5rem;
   font-weight: 500;
-  font-family: var(--font-pretendard);
-  color: var(--gray1);
-  text-align: left;
   display: inline-block;
   min-width: 3.25rem;
-  white-space: nowrap;
 }
 .allergyOptionList7,
 .allergyOptions {
@@ -709,4 +679,8 @@
     padding-bottom: var(--padding-4xl);
     box-sizing: border-box;
   }
+}
+
+.containerSelected {
+  background-color: var(--gray2); /* 예시: 선택된 캠퍼스 배경색 */
 }

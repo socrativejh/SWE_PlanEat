@@ -7,7 +7,7 @@ const ContentWrapper1 = ({ className = "", userData }) => {
   const navigate = useNavigate();
   
   const onBackButtonClick = useCallback(() => {
-    navigate("/Home")
+    navigate("/Home");
   }, [navigate]);
 
   const getAllergyStyle = (allergy) => {
@@ -15,6 +15,10 @@ const ContentWrapper1 = ({ className = "", userData }) => {
       borderColor: "#702cc3",
       color: "#702cc3" 
     } : {};
+  };
+
+  const getCampusStyle = (campus) => {
+    return userData.campus === campus ? styles.containerSelected : "";
   };
 
   return (
@@ -42,25 +46,14 @@ const ContentWrapper1 = ({ className = "", userData }) => {
               </div>
             </div>
             <div className={styles.segmentedButton}>
-              <div className={styles.buttonSegment1}>
-                <div className={styles.container}>
-                  <img
-                    className={styles.checkIcon}
-                    loading="lazy"
-                    alt=""
-                    src={userData.campus === "명륜" ? "/check-icon.svg" : ""}
-                  />
+            <div className={styles.buttonSegment1}>
+                <div className={`${styles.container} ${getCampusStyle("명륜")}`}>
                   <div className={styles.toggleLabel}>명륜</div>
                 </div>
               </div>
               <div className={styles.buttonSegment2}>
-                <div className={styles.container1}>
+                <div className={`${styles.container1} ${getCampusStyle("율전")}`}>
                   <div className={styles.labelText}>율전</div>
-                  <img
-                    className={styles.checkIcon1}
-                    alt=""
-                    src={userData.campus === "율전" ? "/check-icon.svg" : ""}
-                  />
                 </div>
               </div>
             </div>
@@ -73,30 +66,30 @@ const ContentWrapper1 = ({ className = "", userData }) => {
             <b className={styles.b1}>알레르기 정보</b>
           </div>
           <div className={styles.allergyOptions}>
-            <button className={styles.allergyOptionList} style={getAllergyStyle("해당없음")}>
+            <div className={styles.allergyOptionList} style={getAllergyStyle("해당없음")}>
               <div className={styles.div3}>해당없음</div>
-            </button>
-            <button className={styles.allergyOptionList1} style={getAllergyStyle("땅콩")}>
+            </div>
+            <div className={styles.allergyOptionList1} style={getAllergyStyle("땅콩")}>
               <div className={styles.div4}>땅콩</div>
-            </button>
-            <button className={styles.allergyOptionList2} style={getAllergyStyle("갑각류")}>
+            </div>
+            <div className={styles.allergyOptionList2} style={getAllergyStyle("갑각류")}>
               <div className={styles.div5}>갑각류</div>
-            </button>
-            <button className={styles.allergyOptionList3} style={getAllergyStyle("대두")}>
+            </div>
+            <div className={styles.allergyOptionList3} style={getAllergyStyle("대두")}>
               <div className={styles.div6}>대두</div>
-            </button>
-            <button className={styles.allergyOptionList4} style={getAllergyStyle("견과류")}>
+            </div>
+            <div className={styles.allergyOptionList4} style={getAllergyStyle("견과류")}>
               <div className={styles.div7}>견과류</div>
-            </button>
+            </div>
             <div className={styles.allergyOptionList5} style={getAllergyStyle("밀")}>
               <div className={styles.div8}>밀</div>
             </div>
-            <button className={styles.allergyOptionList6} style={getAllergyStyle("오징어")}>
+            <div className={styles.allergyOptionList6} style={getAllergyStyle("오징어")}>
               <div className={styles.div9}>오징어</div>
-            </button>
-            <button className={styles.allergyOptionList7} style={getAllergyStyle("복숭아")}>
+            </div>
+            <div className={styles.allergyOptionList7} style={getAllergyStyle("복숭아")}>
               <div className={styles.div10}>복숭아</div>
-            </button>
+            </div>
           </div>
         </div>
       </div>

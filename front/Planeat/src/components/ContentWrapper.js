@@ -1,23 +1,28 @@
+// ContentWrapper.js
 import React, { useState, useCallback } from "react";
 import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 import styles from "./ContentWrapper.module.css";
+import Dropdown from "./Dropdown";
 
 const ContentWrapper = ({ className = "", onRegisterClick }) => {
   const [selectedDomain, setSelectedDomain] = useState('@g.skku.edu');
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [selectedCampus, setSelectedCampus] = useState("명륜"); // 초기 선택 상태
+  const [selectedCampus, setSelectedCampus] = useState("명륜");
   const [selectedAllergies, setSelectedAllergies] = useState([]);
-  const [message, setMessage] = useState(""); // 메시지 상태 추가
+  const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate();
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
-
-  const selectDomain = (domain) => {
-    setSelectedDomain(domain);
-    setIsDropdownOpen(false);
+  const allergiesMap = {
+    "해당없음": 1,
+    "땅콩": 2,
+    "갑각류": 3,
+    "대두": 4,
+    "견과류": 9,
+    "밀": 5,
+    "오징어": 6,
+    "복숭아": 7
   };
 
   const handleEmailChange = useCallback((event) => {
@@ -58,16 +63,20 @@ const ContentWrapper = ({ className = "", onRegisterClick }) => {
       : {};
   };
 
-  const handleSignup = async () => {
+  const handleSignupClick = async () => {
+    const fullEmail = `${email}${selectedDomain}`;
+    const allergyIds = selectedAllergies.map(allergy => allergiesMap[allergy]);
     const payload = {
-      email: email + selectedDomain,
+      email: fullEmail,
       password,
-      campus: selectedCampus,
-      allergies: selectedAllergies
+      allergies: allergyIds,
+      campus_id: selectedCampus === "명륜" ? 1 : 2,
     };
 
+    const baseUrl = 'http://127.0.0.1:8000/api/v1/';
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/v1/users/signup', {
+      console.log(payload)
+      const response = await fetch(`${baseUrl}users/signup`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -77,17 +86,15 @@ const ContentWrapper = ({ className = "", onRegisterClick }) => {
 
       const data = await response.json();
 
-      if (data.result === 0) {
-        setMessage("회원가입 성공");
-      } else if (data.result === 2) {
-        setMessage("학교 이메일로만 가입 가능합니다.");
-      } else if (data.result === 1) {
-        console.log("이미 사용중인 이메일 입니다.")
-        setMessage("이미 사용중인 이메일 입니다.");
-      }
+      if (response.ok && data.result === 0) {
+        alert("회원가입 성공");
+        navigate("/log-in"); // Redirect to login page
+      } else if (response.ok) {
+        setErrorMessage(data.msg);
+      } else setErrorMessage('모든 필드를 채워주세요.');
     } catch (error) {
-      setMessage("회원가입 중 오류가 발생했습니다.");
-      console.log("회원가입 중 오류가 발생했습니다.")
+      console.error('Signup error:', error);
+      setErrorMessage('모든 필드를 채워주세요.');
     }
   };
 
@@ -118,41 +125,11 @@ const ContentWrapper = ({ className = "", onRegisterClick }) => {
                   onChange={handleEmailChange}
                 />
               </div>
-
-              <div className={styles.emailselectbox}>
-                <div className={styles.dropdownBackground} />
-                <input
-                  className={styles.selected}
-                  value={selectedDomain}
-                  onClick={toggleDropdown}
-                  readOnly
-                />
-                <div className={styles.dropdown}>
-                  <div className={styles.dropdownChild} />
-                  <img
-                    className={styles.dropdownItem}
-                    alt=""
-                    src="/vector-18.svg"
-                    onClick={toggleDropdown}
-                  />
-                </div>
-                {isDropdownOpen && (
-                  <div className={styles.dropdownMenu}>
-                    <div
-                      className={styles.dropdownOption}
-                      onClick={() => selectDomain("@g.skku.edu")}
-                    >
-                      @g.skku.edu
-                    </div>
-                    <div
-                      className={styles.dropdownOption}
-                      onClick={() => selectDomain("@skku.edu")}
-                    >
-                      @skku.edu
-                    </div>
-                  </div>
-                )}
-              </div>
+              <Dropdown
+                options={["@g.skku.edu", "@skku.edu"]}
+                selectedOption={selectedDomain}
+                onSelect={setSelectedDomain}
+              />
             </div>
             <div className={styles.textboxLong}>
               <input
@@ -188,7 +165,6 @@ const ContentWrapper = ({ className = "", onRegisterClick }) => {
           </div>
         </div>
       </div>
-
       <div className={styles.allergy}>
         <div className={styles.allergyWrapper}>
           <div className={styles.allergyHeader}>
@@ -254,9 +230,9 @@ const ContentWrapper = ({ className = "", onRegisterClick }) => {
           </div>
         </div>
       </div>
-
+      {errorMessage && <div className={styles.error}>{errorMessage}</div>}
       <div className={styles.signup}>
-        <button className={styles.signupButton} onClick={handleSignup}>
+        <button className={styles.signupButton} onClick={handleSignupClick}>
           <b className={styles.b2}>가입하기</b>
         </button>
       </div>
@@ -266,6 +242,7 @@ const ContentWrapper = ({ className = "", onRegisterClick }) => {
 
 ContentWrapper.propTypes = {
   className: PropTypes.string,
+  onRegisterClick: PropTypes.func,
 };
 
 export default ContentWrapper;

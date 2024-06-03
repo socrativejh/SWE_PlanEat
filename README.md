@@ -32,7 +32,7 @@ This project aims to enhance the information of menu items stored in a database 
 
 4. Run the application:
     ```bash
-    uvicorn main:app --reload
+    uvicorn app.main:app --reload
     ```
 
 This will start the FastAPI application and enable live reloading during development.

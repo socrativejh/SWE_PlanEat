@@ -25,16 +25,16 @@ const Content = ({ className = "", onToggle }) => {
             <div className={styles.restaurantDetails}>
               <div className={styles.restaurantInfo}>
                 <div className={styles.OkRyuLabel}>
-                  <MenuList name="옥류천식당" className={showMenus ? styles.hidden : ""} />
+                  <MenuList name="옥류천" className={showMenus ? styles.hidden : ""} />
                 </div>
                 <div className={styles.GeumJandiLabel}>
-                  <MenuList name="금잔디식당" className={showMenus ? styles.hidden : ""} />
+                  <MenuList name="금잔디" className={showMenus ? styles.hidden : ""} />
                 </div>
                 <div className={styles.GSJLabel}>
                   <MenuList name="구시재" className={!showMenus ? styles.hidden : ""} />
                 </div>
                 <div className={styles.BGoeulLabel}>
-                  <MenuList name="법고을식당" className={showMenus ? styles.hidden : ""} />
+                  <MenuList name="법고을" className={showMenus ? styles.hidden : ""} />
                 </div>
               </div>
               <div>
@@ -42,10 +42,10 @@ const Content = ({ className = "", onToggle }) => {
                   <MenuList name="해오름" className={!showMenus ? styles.hidden : ""} />  
                 </div>
                 <div className={styles.FacultyLabel}>
-                  <MenuList name="패컬티식당" className={showMenus ? styles.hidden : ""} />
+                  <MenuList name="패컬티" className={showMenus ? styles.hidden : ""} />
                 </div>
                 <div className={styles.EunHaengLabel}>
-                  <MenuList name="은행골식당" className={showMenus ? styles.hidden : ""} />
+                  <MenuList name="은행골" className={showMenus ? styles.hidden : ""} />
                 </div>
               </div>
                 

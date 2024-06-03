@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom'; 
-import styles from './MenuList.module.css';
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import styles from "./MenuList.module.css";
 
-const MenuList = ({name, className}) => {
+const MenuList = ({ name, className }) => {
   const [menuItems, setMenuItems] = useState([]);
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   // // const baseUrl = 'http://127.0.0.1:8000/api/v1';
   // // useEffect(() => {
@@ -29,25 +29,33 @@ const MenuList = ({name, className}) => {
   //   fetchMenuItems();
   // }, []);
 
-  const redirectToPage = () => {
-    navigate('/restaurant-chosen'); // Replace with actual target page
+  const redirectToPage1 = () => {
+    navigate("/restaurant-chosen/1");
+  };
+
+  const redirectToPage2 = () => {
+    navigate("/restaurant-chosen/2");
+  };
+
+  const handleClick = () => {
+    if (name === "행단골") {
+      redirectToPage2();
+    } else if (name === "해오름") {
+      redirectToPage1();
+    } else {
+      // 기본 동작 또는 다른 name 값에 대한 처리
+      navigate("/default-page"); // 기본 페이지로 이동
+    }
   };
 
   return (
-    <div className={[styles.menuList, className].join(' ')}>
+    <div className={[styles.menuList, className].join(" ")}>
       <div className={styles.toggleContainer}>
         <span className={styles.label}>{name}</span>
-        <button onClick={redirectToPage} className={styles.toggleButton}>
+        <button onClick={handleClick} className={styles.toggleButton}>
           +
         </button>
       </div>
-      <ul className={styles.menu}>
-        {menuItems.map((item, index) => (
-          <li key={index} className={styles.menuItem}>
-            {item.name} <span className={styles.price}>{item.price}원</span>
-          </li>
-        ))}
-      </ul>
     </div>
   );
 };

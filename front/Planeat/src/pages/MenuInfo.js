@@ -1,52 +1,31 @@
-import { useCallback } from "react";
-import { useNavigate } from "react-router-dom";
-import Header from "../components/Header";
-import Information from "../components/Information";
+import React from "react";
+import { useParams } from "react-router-dom";
 import styles from "./MenuInfo.module.css";
+import image1 from "../image/menu_detail_page.png";
+import image2 from "../image/menu_detail_page_2.png";
 
 const MenuInfo = () => {
-  const navigate = useNavigate();
+  const { id } = useParams();
+  let imageUrl;
 
-  const onLogoContainerClick = useCallback(() => {
-    // Please sync "Home" to the project
-  }, []);
-
-  const onUserIconClick = useCallback(() => {
-    navigate("/my-page");
-  }, [navigate]);
+  switch (id) {
+    case "1":
+      imageUrl = image1;
+      break;
+    case "2":
+      imageUrl = image2;
+      break;
+    default:
+      imageUrl = image1;
+  }
 
   return (
-    <div className={styles.menuInfo}>
-      <Header
-        user1="/user.svg"
-        onLogoContainerClick={onLogoContainerClick}
-        onUserIconClick={onUserIconClick}
-      />
-      <main className={styles.content}>
-        <section className={styles.restaurantInfo}>
-          <div className={styles.restaurantDetails}>
-            <div className={styles.restaurantNameTime}>
-              <div className={styles.restaurantName}>
-                <h3 className={styles.h3}>행단골 - 봄이 온 소반</h3>
-                <div className={styles.mealTime}>
-                  <div className={styles.div}>5월 9일(목) 중식</div>
-                </div>
-              </div>
-              <div className={styles.foodCategories}>
-                <div className={styles.category}>
-                  <div className={styles.categoryList}>
-                    <b className={styles.b}>고단백</b>
-                  </div>
-                  <div className={styles.categoryList1}>
-                    <b className={styles.b1}>비건</b>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <Information />
-        </section>
-      </main>
+    <div className={styles.MenuInfo}>
+      {imageUrl ? (
+        <img src={imageUrl} alt="MenuInfo" className={styles.fullscreenImage} />
+      ) : (
+        <p>Loading...</p>
+      )}
     </div>
   );
 };

@@ -76,9 +76,9 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Loading />} />
-      <Route path="/menu-info" element={<MenuInfo />} />
+      <Route path="/menu-info/:id" element={<MenuInfo />} />
       <Route path="/home" element={<Home />} />
-      <Route path="/restaurant-chosen" element={<RestaurantChosen />} />
+      <Route path="/restaurant-chosen/:id" element={<RestaurantChosen />} />
       <Route path="/sign-in" element={<SignIn />} />
       <Route path="/log-in" element={<LogIn />} />
       <Route path="/my-page" element={<MyPage />} />

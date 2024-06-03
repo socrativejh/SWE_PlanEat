@@ -4,6 +4,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Pretendard+Variable:wght@400&display=swap");
 body {
   margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  background-color: var(--black); /* Ensure background color matches your design */
   line-height: normal;
 }
 :root {

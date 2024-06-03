@@ -91,10 +91,10 @@ const ContentWrapper = ({ className = "", onRegisterClick }) => {
         navigate("/log-in"); // Redirect to login page
       } else if (response.ok) {
         setErrorMessage(data.msg);
-      } else setErrorMessage('모든 필드를 채워주세요.');
+      } else setErrorMessage('* 모든 필드를 채워주세요.');
     } catch (error) {
       console.error('Signup error:', error);
-      setErrorMessage('모든 필드를 채워주세요.');
+      setErrorMessage('* 모든 필드를 채워주세요.');
     }
   };
 
@@ -125,11 +125,13 @@ const ContentWrapper = ({ className = "", onRegisterClick }) => {
                   onChange={handleEmailChange}
                 />
               </div>
+              <div className={styles.dropdowncontainer}>
               <Dropdown
                 options={["@g.skku.edu", "@skku.edu"]}
                 selectedOption={selectedDomain}
                 onSelect={setSelectedDomain}
               />
+              </div>
             </div>
             <div className={styles.textboxLong}>
               <input

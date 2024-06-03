@@ -1,5 +1,7 @@
 .dropdowncontainer{
   font-size:1.25rem;
+  border-radius: var(--br-5xs);
+  color: var(--gray1);
 }
 .frameChild {
   width: 58.125rem;
@@ -88,7 +90,7 @@
   color: var(--white);
   min-width: 15.625rem;
 }
-.dropdownBackground,
+
 .textboxShort {
   border-radius: var(--br-5xs);
   border: 1px solid var(--gray2);
@@ -103,18 +105,8 @@
   min-width: 13.438rem;
   max-width: 100%;
   z-index: 1;
-  margin-left:0.5rem; 
 }
-.dropdownBackground {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  margin: 0 !important;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
+
 .selected {
   width: calc(100% - 24px);
   border: 0;
@@ -135,6 +127,7 @@
   min-width: 6.063rem;
   z-index: 1;
 }
+
 .dropdownChild {
   position: absolute;
   top: 0;
@@ -157,6 +150,7 @@
   width: 4rem;
   position: relative;
   z-index: 1;
+  
 }
 .emailselectbox,
 .inputFields {

@@ -147,7 +147,7 @@ const FrameComponent = ({ onFilterChange, campus }) => {
             return null; // Unknown Restaurant인 경우 렌더링하지 않음
           }
           const handleClick = () => {
-            if (restaurantName === "패컬리티식당") {
+            if (restaurantName === "패컬티식당") {
               redirectToPage1();
             } else if (restaurantName === "행단골") {
               redirectToPage2();

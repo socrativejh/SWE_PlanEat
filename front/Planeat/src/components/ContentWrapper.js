@@ -87,6 +87,11 @@ const ContentWrapper = ({ className = "", onRegisterClick }) => {
       const data = await response.json();
 
       if (response.ok && data.result === 0) {
+        // Store user information in localStorage
+        localStorage.setItem('userEmail', fullEmail);
+        localStorage.setItem('userCampus', selectedCampus);
+        localStorage.setItem('userAllergies', JSON.stringify(selectedAllergies));
+        
         alert("회원가입 성공");
         navigate("/log-in"); // Redirect to login page
       } else if (response.ok) {

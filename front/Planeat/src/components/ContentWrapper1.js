@@ -3,12 +3,14 @@ import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import styles from "./ContentWrapper1.module.css";
 
-const ContentWrapper1 = ({ className = "" }) => {
+const ContentWrapper1 = ({ className = "" , userData}) => {
   const navigate = useNavigate();
   
   const onBackButtonClick = useCallback(() => {
-    navigate("/")
+    navigate("/Home")
   }, [navigate]);
+  
+  console.log(userData.allergies)
 
   return (
     <section className={[styles.contentWrapper, className].join(" ")}>
@@ -22,38 +24,18 @@ const ContentWrapper1 = ({ className = "" }) => {
           <div className={styles.infoFields}>
             <div className={styles.infoFieldLabels}>
               <div className={styles.div}>이메일</div>
-              <div className={styles.div1}>비밀번호</div>
               <div className={styles.div2}>소속 캠퍼스</div>
             </div>
           </div>
           <div className={styles.infoInputs}>
             <div className={styles.emailInput}>
-              <div className={styles.textboxShort}>
                 <div
                   className={styles.text}>
-                    PLANEAT1234
+                    {userData.email}
                   </div>
-              </div>
               <div className={styles.emailselectbox}>
                 <div className={styles.selectboxBackground} />
-                <div className={styles.selected}>
-                  <div className={styles.gskkuedu}>@g.skku.edu</div>
-                </div>
-                <div className={styles.dropdown}>
-                  <div className={styles.dropdownBackground} />
-                  <img
-                    className={styles.dropdownChild}
-                    loading="lazy"
-                    alt=""
-                    src="/vector-18.svg"
-                  />
-                </div>
               </div>
-            </div>
-            <div className={styles.textboxLong}>
-            <div className={styles.text}>
-                PW1234
-                  </div>
             </div>
             <div className={styles.segmentedButton}>
               <div className={styles.buttonSegment1}>
@@ -62,7 +44,7 @@ const ContentWrapper1 = ({ className = "" }) => {
                     className={styles.checkIcon}
                     loading="lazy"
                     alt=""
-                    src="/check-icon.svg"
+                    src={userData.userCampus === "명륜" ? "/check-icon.svg" : ""}
                   />
                   <div className={styles.toggleLabel}>명륜</div>
                 </div>
@@ -70,7 +52,11 @@ const ContentWrapper1 = ({ className = "" }) => {
               <div className={styles.buttonSegment2}>
                 <div className={styles.container1}>
                   <div className={styles.labelText}>율전</div>
-                  <img className={styles.checkIcon1} alt="" />
+                  <img
+                    className={styles.checkIcon1}
+                    alt=""
+                    src={userData.campus === "율전" ? "/check-icon.svg" : ""}
+                  />
                 </div>
               </div>
             </div>

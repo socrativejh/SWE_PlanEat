@@ -2,6 +2,7 @@ import { useCallback, useState } from "react";
 import PropTypes from "prop-types";
 import styles from "./Content.module.css";
 import MenuList from "./MenuList";
+import MenuList2 from "./MenuList2";
 import ToggleButton from "./ToggleButton";
 
 const Content = ({ className = "", onToggle }) => {
@@ -25,16 +26,16 @@ const Content = ({ className = "", onToggle }) => {
             <div className={styles.restaurantDetails}>
               <div className={styles.restaurantInfo}>
                 <div className={styles.OkRyuLabel}>
-                  <MenuList name="옥류천" className={showMenus ? styles.hidden : ""} />
+                  <MenuList2 name="옥류천" className={showMenus ? styles.hidden : ""} />
                 </div>
                 <div className={styles.GeumJandiLabel}>
-                  <MenuList name="금잔디" className={showMenus ? styles.hidden : ""} />
+                  <MenuList2 name="금잔디" className={showMenus ? styles.hidden : ""} />
                 </div>
                 <div className={styles.GSJLabel}>
                   <MenuList name="구시재" className={!showMenus ? styles.hidden : ""} />
                 </div>
                 <div className={styles.BGoeulLabel}>
-                  <MenuList name="법고을" className={showMenus ? styles.hidden : ""} />
+                  <MenuList2 name="법고을" className={showMenus ? styles.hidden : ""} />
                 </div>
               </div>
               <div>
@@ -42,10 +43,10 @@ const Content = ({ className = "", onToggle }) => {
                   <MenuList name="해오름" className={!showMenus ? styles.hidden : ""} />  
                 </div>
                 <div className={styles.FacultyLabel}>
-                  <MenuList name="패컬티" className={showMenus ? styles.hidden : ""} />
+                  <MenuList2 name="패컬티" className={showMenus ? styles.hidden : ""} />
                 </div>
                 <div className={styles.EunHaengLabel}>
-                  <MenuList name="은행골" className={showMenus ? styles.hidden : ""} />
+                  <MenuList2 name="은행골" className={showMenus ? styles.hidden : ""} />
                 </div>
               </div>
                 

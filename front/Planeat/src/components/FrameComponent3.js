@@ -43,10 +43,10 @@ const FrameComponent3 = ({ className = "", onLoginClick, onRegisterClick }) => {
       .then((response) => response.json())
       .then((data) => {
         if (data.result === 0) {
-          alert("로그인 성공");
+          alert("로그인 성공: " + data.msg);
           navigate('/home');  // 로그인 성공 시 홈 화면으로 이동
         } else {
-          alert("로그인 실패");
+          alert("로그인 실패: " + data.msg);
         }
       })
       .catch((error) => {

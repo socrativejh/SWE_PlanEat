@@ -131,7 +131,13 @@ const FrameComponent = ({ onFilterChange, campus }) => {
             <button
               key={filter}
               className={`${styles.filterButtons} ${
-                selectedFilter === filter ? styles.selected : ""
+                selectedFilter === filter
+                  ? campusId === 2
+                    ? styles.selected
+                    : campusId === 1
+                    ? styles.selectedMyeong
+                    : ""
+                  : ""
               }`}
               onClick={() => handleFilterClick(filter)}
             >
@@ -147,7 +153,7 @@ const FrameComponent = ({ onFilterChange, campus }) => {
             return null; // Unknown Restaurant인 경우 렌더링하지 않음
           }
           const handleClick = () => {
-            if (restaurantName === "패컬리티식당") {
+            if (restaurantName === "패컬티식당") {
               redirectToPage1();
             } else if (restaurantName === "행단골") {
               redirectToPage2();

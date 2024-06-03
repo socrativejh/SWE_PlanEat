@@ -1,12 +1,11 @@
 import PropTypes from "prop-types";
 import styles from "./Header.module.css";
 
-
 const Header = ({
   className = "",
   user1,
   onLogoContainerClick,
-  onUserIconClick,
+  onUserIconClick, campus
 }) => {
   return (
     <header className={[styles.header, className].join(" ")}>
@@ -19,10 +18,12 @@ const Header = ({
           <div className={styles.timeselect}>
             <div className={styles.mealSelectionBackground} />
             <div className={styles.breakfastSelection}>
-              <div className={styles.breakfastBackground} />
               <a className={styles.a}>조식</a>
             </div>
-            <a className={styles.a1}>중식</a>
+            <div className={styles.breakfastSelection}>
+              <div className={`${campus === "명" ? styles.breakfastBackgroundMyeong : styles.breakfastBackground}`} />
+              <a className={styles.a1}>중식</a>
+            </div>
             <a className={styles.a2}>석식</a>
           </div>
           <div className={styles.userSelection}>

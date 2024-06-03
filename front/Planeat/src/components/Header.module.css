@@ -50,6 +50,18 @@
   height: 2.75rem;
   z-index: 1;
 }
+
+.breakfastBackgroundMyeong {
+  position: absolute;
+  top: 0.056rem;
+  left: 0;
+  border-radius: var(--br-5xs);
+  background-color: #149F86;
+  width: 5rem;
+  height: 2.75rem;
+  z-index: 1;
+}
+
 .a {
   text-decoration: none;
   position: absolute;

@@ -7,7 +7,7 @@ import styles from "./Home.module.css";
 
 const Home = () => {
   const navigate = useNavigate();
-  const [campus, setCampus] = useState("명");
+  const [campus, setCampus] = useState(0);
 
   const onLogoContainerClick = useCallback(() => {
     // Please sync "Home" to the project
@@ -31,6 +31,7 @@ const Home = () => {
             user1="/user1.svg"
             onLogoContainerClick={onLogoContainerClick}
             onUserIconClick={onUserIconClick}
+            campus={campus}
           />
           <Content onToggle={handleToggle} />
           <FrameComponent campus={campus} />

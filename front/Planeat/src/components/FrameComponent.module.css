@@ -32,6 +32,12 @@
   border-color: #702cc3;
 }
 
+.filterButtons.selectedMyeong {
+  background-color: #149F86;
+  color: black;
+  border-color: #149F86;
+}
+
 .menuList {
   display: flex;
   flex-wrap: wrap; /* 요소를 여러 줄로 배치하도록 설정 */

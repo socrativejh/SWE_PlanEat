@@ -132,10 +132,10 @@ const FrameComponent = ({ onFilterChange, campus }) => {
               key={filter}
               className={`${styles.filterButtons} ${
                 selectedFilter === filter
-                  ? campusId === 1
-                    ? styles.selectedMyeong
-                    : campusId === 2
+                  ? campusId === 2
                     ? styles.selected
+                    : campusId === 1
+                    ? styles.selectedMyeong
                     : ""
                   : ""
               }`}

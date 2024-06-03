@@ -3,14 +3,19 @@ import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import styles from "./ContentWrapper1.module.css";
 
-const ContentWrapper1 = ({ className = "" , userData}) => {
+const ContentWrapper1 = ({ className = "", userData }) => {
   const navigate = useNavigate();
   
   const onBackButtonClick = useCallback(() => {
     navigate("/Home")
   }, [navigate]);
-  
-  console.log(userData.allergies)
+
+  const getAllergyStyle = (allergy) => {
+    return userData.allergies.includes(allergy) ? {
+      borderColor: "#702cc3",
+      color: "#702cc3" 
+    } : {};
+  };
 
   return (
     <section className={[styles.contentWrapper, className].join(" ")}>
@@ -29,10 +34,9 @@ const ContentWrapper1 = ({ className = "" , userData}) => {
           </div>
           <div className={styles.infoInputs}>
             <div className={styles.emailInput}>
-                <div
-                  className={styles.text}>
-                    {userData.email}
-                  </div>
+              <div className={styles.textboxLong}>
+                <div className={styles.text}>{userData.email}</div>
+              </div>
               <div className={styles.emailselectbox}>
                 <div className={styles.selectboxBackground} />
               </div>
@@ -44,7 +48,7 @@ const ContentWrapper1 = ({ className = "" , userData}) => {
                     className={styles.checkIcon}
                     loading="lazy"
                     alt=""
-                    src={userData.userCampus === "명륜" ? "/check-icon.svg" : ""}
+                    src={userData.campus === "명륜" ? "/check-icon.svg" : ""}
                   />
                   <div className={styles.toggleLabel}>명륜</div>
                 </div>
@@ -69,28 +73,28 @@ const ContentWrapper1 = ({ className = "" , userData}) => {
             <b className={styles.b1}>알레르기 정보</b>
           </div>
           <div className={styles.allergyOptions}>
-            <button className={styles.allergyOptionList}>
+            <button className={styles.allergyOptionList} style={getAllergyStyle("해당없음")}>
               <div className={styles.div3}>해당없음</div>
             </button>
-            <button className={styles.allergyOptionList1}>
+            <button className={styles.allergyOptionList1} style={getAllergyStyle("땅콩")}>
               <div className={styles.div4}>땅콩</div>
             </button>
-            <button className={styles.allergyOptionList2}>
+            <button className={styles.allergyOptionList2} style={getAllergyStyle("갑각류")}>
               <div className={styles.div5}>갑각류</div>
             </button>
-            <button className={styles.allergyOptionList3}>
+            <button className={styles.allergyOptionList3} style={getAllergyStyle("대두")}>
               <div className={styles.div6}>대두</div>
             </button>
-            <button className={styles.allergyOptionList4}>
+            <button className={styles.allergyOptionList4} style={getAllergyStyle("견과류")}>
               <div className={styles.div7}>견과류</div>
             </button>
-            <div className={styles.allergyOptionList5}>
+            <div className={styles.allergyOptionList5} style={getAllergyStyle("밀")}>
               <div className={styles.div8}>밀</div>
             </div>
-            <button className={styles.allergyOptionList6}>
+            <button className={styles.allergyOptionList6} style={getAllergyStyle("오징어")}>
               <div className={styles.div9}>오징어</div>
             </button>
-            <button className={styles.allergyOptionList7}>
+            <button className={styles.allergyOptionList7} style={getAllergyStyle("복숭아")}>
               <div className={styles.div10}>복숭아</div>
             </button>
           </div>
@@ -107,6 +111,11 @@ const ContentWrapper1 = ({ className = "" , userData}) => {
 
 ContentWrapper1.propTypes = {
   className: PropTypes.string,
+  userData: PropTypes.shape({
+    email: PropTypes.string.isRequired,
+    campus: PropTypes.string.isRequired,
+    allergies: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }).isRequired,
 };
 
 export default ContentWrapper1;

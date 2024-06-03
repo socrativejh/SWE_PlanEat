@@ -17,7 +17,11 @@ const MyPage = () => {
     const campus = localStorage.getItem('userCampus');
     const allergies = JSON.parse(localStorage.getItem('userAllergies')) || [];
 
-    setUserData({ email, campus, allergies });
+    const userData = { email, campus, allergies };
+    setUserData(userData);
+
+    // 콘솔에 출력
+    console.log('User Data:', userData);
   }, []);
 
   const onLogoContainerClick = useCallback(() => {

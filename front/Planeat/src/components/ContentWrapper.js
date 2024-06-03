@@ -1,4 +1,3 @@
-// ContentWrapper.js
 import React, { useState, useCallback } from "react";
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
@@ -75,7 +74,7 @@ const ContentWrapper = ({ className = "", onRegisterClick }) => {
 
     const baseUrl = 'http://127.0.0.1:8000/api/v1/';
     try {
-      console.log(payload)
+      console.log(payload);
       const response = await fetch(`${baseUrl}users/signup`, {
         method: 'POST',
         headers: {
@@ -91,9 +90,9 @@ const ContentWrapper = ({ className = "", onRegisterClick }) => {
         localStorage.setItem('userEmail', fullEmail);
         localStorage.setItem('userCampus', selectedCampus);
         localStorage.setItem('userAllergies', JSON.stringify(selectedAllergies));
-        
+
         alert("회원가입 성공");
-        navigate("/log-in"); // Redirect to login page
+        navigate("/log-in", { state: { email: fullEmail, campus: selectedCampus, allergies: selectedAllergies } }); // Redirect to login page with state
       } else if (response.ok) {
         setErrorMessage(data.msg);
       } else setErrorMessage('* 모든 필드를 채워주세요.');
@@ -131,11 +130,11 @@ const ContentWrapper = ({ className = "", onRegisterClick }) => {
                 />
               </div>
               <div className={styles.dropdowncontainer}>
-              <Dropdown
-                options={["@g.skku.edu", "@skku.edu"]}
-                selectedOption={selectedDomain}
-                onSelect={setSelectedDomain}
-              />
+                <Dropdown
+                  options={["@g.skku.edu", "@skku.edu"]}
+                  selectedOption={selectedDomain}
+                  onSelect={setSelectedDomain}
+                />
               </div>
             </div>
             <div className={styles.textboxLong}>

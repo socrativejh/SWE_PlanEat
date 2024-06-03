@@ -56,13 +56,6 @@ const MenuList = ({ name, className }) => {
           +
         </button>
       </div>
-      <ul className={styles.menu}>
-        {menuItems.map((item, index) => (
-          <li key={index} className={styles.menuItem}>
-            {item.name} <span className={styles.price}>{item.price}원</span>
-          </li>
-        ))}
-      </ul>
     </div>
   );
 };

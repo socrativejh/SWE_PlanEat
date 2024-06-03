@@ -5,8 +5,8 @@
 .HDGLabel {
   position: absolute;
   z-index: 2;
-  left:4rem;
-  bottom:0.1rem;
+  right:3rem;
+  bottom:2rem;
 }
 
 .HORLabel {
@@ -19,7 +19,7 @@
 .GSJLabel{
   z-index:2;
   position:relative;
-  top:20rem;
+  top:14rem;
   left:12rem;
 }
 
@@ -39,21 +39,21 @@
 
 .FacultyLabel {
   position: absolute;
-  top: 27rem;
-  right: 28rem;
+  top: 26rem;
+  right: 29rem;
   z-index: 2;
 }
 
 .EunHaengLabel {
   position: absolute;
-  top: 15rem;
+  top: 19rem;
   right: 17rem;
   z-index: 2;
 }
 
 .OkRyuLabel {
   position: absolute;
-  top: 8rem;
+  top: 9rem;
   left: 43rem;
   z-index: 2;
 }

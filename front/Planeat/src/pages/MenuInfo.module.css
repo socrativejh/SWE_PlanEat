@@ -138,6 +138,11 @@
   line-height: normal;
   letter-spacing: normal;
 }
+.fullscreenImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 @media screen and (max-width: 1150px) {
   .restaurantInfo {
     gap: var(--gap-41xl);

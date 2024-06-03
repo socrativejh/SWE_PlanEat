@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 import styles from "./FrameComponent.module.css";
 
 const FrameComponent = ({ onFilterChange, campus }) => {
@@ -7,14 +8,15 @@ const FrameComponent = ({ onFilterChange, campus }) => {
   const [menuItems, setMenuItems] = useState([]);
   const [restaurants, setRestaurants] = useState([]);
   const [campusId, setCampusId] = useState(campus === "명" ? 1 : 2);
+  const navigate = useNavigate();
 
-  const baseUrl = 'http://127.0.0.1:8000/api/v1';
+  const baseUrl = "http://127.0.0.1:8000/api/v1";
 
   const filterToTagId = {
-    "고단백": 2,
-    "가성비": 1,
-    "저칼로리": 3,
-    "비건": 4,
+    고단백: 2,
+    가성비: 1,
+    저칼로리: 3,
+    비건: 4,
   };
 
   useEffect(() => {
@@ -28,7 +30,9 @@ const FrameComponent = ({ onFilterChange, campus }) => {
 
   const fetchRestaurants = async (campus_id) => {
     try {
-      const response = await fetch(`${baseUrl}/campuses/${campus_id}/restaurants`);
+      const response = await fetch(
+        `${baseUrl}/campuses/${campus_id}/restaurants`
+      );
       if (response.ok) {
         const data = await response.json();
         setRestaurants(data);
@@ -42,7 +46,9 @@ const FrameComponent = ({ onFilterChange, campus }) => {
 
   const fetchMenuByTag = async (tagId) => {
     try {
-      const response = await fetch(`${baseUrl}/menus/search_by_tags/?tags=${tagId}`);
+      const response = await fetch(
+        `${baseUrl}/menus/search_by_tags/?tags=${tagId}`
+      );
       if (response.ok) {
         const menuIds = await response.json();
         const menuPromises = menuIds.map((menuId) => fetchMenuById(menuId));
@@ -109,6 +115,14 @@ const FrameComponent = ({ onFilterChange, campus }) => {
     return "Unknown Restaurant";
   };
 
+  const redirectToPage1 = () => {
+    navigate("/menu-info/1");
+  };
+
+  const redirectToPage2 = () => {
+    navigate("/menu-info/2");
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.filters}>
@@ -116,7 +130,9 @@ const FrameComponent = ({ onFilterChange, campus }) => {
           {filters.map((filter) => (
             <button
               key={filter}
-              className={`${styles.filterButtons} ${selectedFilter === filter ? styles.selected : ""}`}
+              className={`${styles.filterButtons} ${
+                selectedFilter === filter ? styles.selected : ""
+              }`}
               onClick={() => handleFilterClick(filter)}
             >
               <b>{filter}</b>
@@ -130,19 +146,34 @@ const FrameComponent = ({ onFilterChange, campus }) => {
           if (restaurantName === "Unknown Restaurant") {
             return null; // Unknown Restaurant인 경우 렌더링하지 않음
           }
+          const handleClick = () => {
+            if (restaurantName === "패컬리티식당") {
+              redirectToPage1();
+            } else if (restaurantName === "행단골") {
+              redirectToPage2();
+            } else {
+              redirectToPage2();
+            }
+          };
           return (
-            <button key={item.id} className={styles.menuItem} onClick={() => console.log(item)}>
+            <button
+              key={item.id}
+              className={styles.menuItem}
+              onClick={handleClick}
+            >
               <div className={styles.menuContent}>
                 <div className={styles.restaurantName}>{restaurantName}</div>
                 <div className={styles.menuName}>
-                  {item.name.split('|').map((part, index) => (
+                  {item.name.split("|").map((part, index) => (
                     <span key={index}>
                       {part}
                       <br />
                     </span>
                   ))}
                 </div>
-                <div className={styles.menuPrice}>{item.price.toLocaleString()}원</div>
+                <div className={styles.menuPrice}>
+                  {item.price.toLocaleString()}원
+                </div>
               </div>
             </button>
           );

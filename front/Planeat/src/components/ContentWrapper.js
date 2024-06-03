@@ -57,11 +57,11 @@ const ContentWrapper = ({ className = "", onRegisterClick }) => {
   };
 
   const getAllergyStyle = (allergy) => {
-    return userData.allergies.includes(allergy) ? {
-      borderColor: "#702cc3",
-      color: "#702cc3" 
-    } : {};
+    return selectedAllergies.includes(allergy)
+      ? { borderColor: "#702cc3", color: "#702cc3" }
+      : {};
   };
+  
 
   const handleSignupClick = async () => {
     const fullEmail = `${email}${selectedDomain}`;
